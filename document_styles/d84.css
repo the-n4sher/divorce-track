@@ -1,0 +1,198 @@
+html, body {
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+
+			body > div {
+				background-color: #fff;
+				width: 100%;
+				text-align: center;
+				position: relative;
+				margin: 0;
+				padding: 0;
+			}
+
+			img {
+				width: 85%;
+				height:auto;
+				margin: 0 3%;
+				position: relative;
+				z-index: 0;
+			}
+
+			.text {
+				position: absolute;
+				z-index: 10;
+				border: none;
+				text-align: left;
+				font-size: 15px;
+			}
+
+			.tick {
+				width: 10px;
+				height: 10px;
+			}
+
+			.small-character {
+				line-height: 0.9;
+				width: 10px;
+				height: 10px;
+			}
+
+			.strike {
+				position: absolute;
+				z-index: 10;
+				height: 100px;
+				border-top: 2px solid #000;
+			}
+
+			#name-of-court {
+				width: 183px;
+				height: 21px;
+				top: 61px;
+				right: 198px;
+			}
+
+			#case-no {
+				width: 110px;
+				height: 21px;
+				top: 59px;
+				right: 74px;
+			}
+
+			#name-of-petitioner {
+				width: 305px;
+				height: 21px;
+				top: 105px;
+				right: 75px;
+			}
+
+			#name-of-respondent {
+				width: 305px;
+				height: 21px;
+				top: 151px;
+				right: 75px;
+			}
+
+			#name-of-corespondent {
+				width: 305px;
+				height: 21px;
+				top: 198px;
+				right: 75px;
+			}
+
+			#fee-charged {
+				width: 305px;
+				height: 21px;
+				top: 244px;
+				right: 75px;
+			}
+
+			#the-petitioner {
+				width: 467px;
+				height: 21px;
+				top: 459px;
+				left: 171px;
+			}
+
+			#nisi_strike{top: 500px;left: 250px;width:68px;}
+			#conditonal_order_strike {top: 500px;left: 324px;width:100px;}
+			
+
+			#decree-box {
+				top: 496px;
+				left: 218px;
+			}
+
+			#divorce-box {
+				top: 496px;
+				left: 431px;
+			}
+
+			#dissolution-box {
+				top: 496px;
+				left: 502px;
+			}
+
+			#nullity-box {
+				top: 496px;
+				left: 592px;
+			}
+
+			#judicial-box {
+				top: 520px;
+				left: 218px;
+			}
+
+			#the-petitioner2 {
+				width: 467px;
+				height: 21px;
+				top: 636px;
+				left: 171px;
+			}
+
+			#district-box {
+				top: 673px;
+				left: 56px;
+			}
+
+
+			#day1 {
+				top: 777px;
+				right: 209px;
+			}
+
+			#day2 {
+				top: 777px;
+				right: 192px;
+			}
+
+			#month1 {
+				top: 777px;
+				right: 167px;
+			}
+
+			#month2 {
+				top: 777px;
+				right: 149px;
+			}
+
+			#year1 {
+				top: 777px;
+				right: 124px;
+			}
+
+			#year2 {
+				top: 777px;
+				right: 106px;
+			}
+
+			#year3 {
+				top: 777px;;
+				right: 88px;
+			}
+
+			#year4 {
+				top: 777px;
+				right: 70px;
+			}
+
+			#signature-title {
+				width: 50px;
+				top: 824px;
+				left: 130px;
+			}
+
+			#signature-title2 {
+				width: 120px;
+				top: 824px;
+				left: 185px;
+			}
+
+			.strike {
+				position: absolute;
+				z-index: 10;
+				height: 100px;
+				border-top: 2px solid #000;
+			}

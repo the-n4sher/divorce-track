@@ -1,0 +1,146 @@
+html * {font-family: 'Times New Roman', serif;} 
+		html, body {margin: 0;padding: 0;position: relative;}
+		body > div {background-color: #fff;width: 100%;	page-break-after: always;text-align: center;position: relative;margin: 0;padding: 0;z-index: 0;}
+
+		body > *:last-child {page-break-after: auto;}
+		img {width: 85%;height:auto;margin: 0 3%;position: relative;z-index: 0;}
+		.text,.textarea {position: absolute;z-index: 10;border: none;text-align: left;font-size: 15px;}
+		.tick {width: 10px;height: 10px;}
+		.text small-character {line-height: 0.9;width: 10px;height: 10px;}
+		.text,.textarea {position: absolute;z-index: 10;border: none;text-align: left;background: none;}
+
+		.strike {
+			position: absolute;
+			z-index: 10;
+			height: 100px;
+			border-top: 2px solid #000;
+			color:#2B3362;
+		}
+
+		body > div{
+		width: 820px;
+		margin: 0 auto;
+		}
+
+		body > div img {
+		width: 690px;
+		}
+
+
+
+
+		/* PAGE 1 */
+
+		#court_name{left: 390px;top: 24px; width: 300px;}
+		#case_number{right: 114px;top: 78px;}
+		#pet_name{left: 160px; top: 215px; width:300px;}
+		#res_name{left: 160px; top: 250px; width:300px;}
+
+		/*#varied_strike_page1{width: 550px;height: 2px;top: 398px;left: 100px;}
+		#varied_strike_page1_s2{width: 550px;height: 2px;top: 415px;left: 100px;}*/
+
+		#a_transferor_name{right:70px;top: 522px; width:320px;font-size:12px;}
+		#a_transferor_all_names{right: 100px;top: 565px;font-size:11px;width:290px;}
+
+		#a_dob_day1{right: 214px;top: 600px;}
+		#a_dob_day2{right: 198px;top: 600px;}
+		#a_dob_month1{right: 172px;top: 600px;}
+		#a_dob_month2{right: 158px;top: 600px;}
+		#a_dob_year1{right: 132px;top: 600px;}
+		#a_dob_year2{right: 116px;top: 600px;}
+		#a_dob_year3{right: 100px;top: 600px;}
+		#a_dob_year4{right: 84px;top: 600px;}
+
+		#a_transferor_address{right: 90px;top: 646px;width: 300px;height: 80px;font-size: 13px;}
+		#a_transferor_address_nat_num{right: 210px;top: 735px;}
+
+
+		/* PAGE 1 END */
+
+		/* PAGE 2 */
+
+		#b_transferor_name{right:70px;top: 60px; width:320px;font-size:12px;}
+		#b_transferor_all_names{right: 100px;top: 115px;font-size:11px;width:290px;}
+		#b_transferor_address{right: 90px;top: 195px;width: 300px;height: 80px;font-size: 13px;}
+		#b_transferor_address_nat_num{right: 210px;top: 276px;}
+
+		#b_dob_day1{right: 212px;top:160px;}
+		#b_dob_day2{right: 196px;top:160px;}
+		#b_dob_month1{right: 170px;top:160px;}
+		#b_dob_month2{right: 156px;top:160px;}
+		#b_dob_year1{right: 134px;top:160px;}
+		#b_dob_year2{right: 116px;top:160px;}
+		#b_dob_year3{right: 98px;top:160px;}
+		#b_dob_year4{right: 84px;top:160px;}
+
+		
+		#name_of_arrangements{right: 75px; top: 425px; width:320px;}
+		#name_and_address{right: 90px;top: 465px;width: 300px;height: 75px;font-size: 13px;}
+		#ref_number{right: 210px;top: 550px; }
+
+		#percent_start{right: 296px;top: 638px; width:30px; }
+		#percent_end{right: 258px;top: 638px; width:30px; }
+
+
+		/* PAGE 2 END */
+
+		/* PAGE 3 */
+
+		#pension_5050_strike{width: 300px;height: 2px;top: 70px;right: 105px;}
+		#pension_5050_strike_2{width: 300px;height: 2px;top:85px;right: 105px;}
+
+		#pension_sharing_strike{width: 300px;height: 2px;top: 122px;right: 105px;z-index:9999;}
+		#pension_sharing_strike_2{width: 300px;height: 2px;top: 140px;right: 105px;z-index:9999;}
+
+		#pension_sharing_50_50{font-size: 12px;right: 20px;top: 772px; color:red;}
+
+		#pension_sharing_other_wording{font-size: 13.5px;right: 290px;top: 128px;background-color: #fff; width:100px}
+		#pension_wording_50_50{font-size: 13.5px;right: 120px;top: 74px;background-color: #fff; width: 80px;}
+
+		#filed_d81_yes{right: 278px;top: 160px;}
+		#filed_d81_no{right: 202px;top: 160px;}
+
+		#filed_strike_1{width: 150px;height: 2px;top: 206px;right: 255px;}
+		#filed_strike_2{width: 290px;height: 2px;top: 222px;right: 110px;}
+		#filed_strike_3{width: 290px;height: 2px;top: 238px;right: 110px;}
+		#filed_strike_4{width: 290px;height: 2px;top: 254px;right: 110px;}
+		#filed_strike_5{width: 290px;height: 2px;top: 274px;right: 108px;}
+		#filed_strike_6{width: 290px;height: 2px;top: 290px;right: 108px;}
+		#filed_strike_7{width: 290px;height: 2px;top: 306px;right: 110px;}
+		#filed_strike_8{width: 300px;height: 2px;top: 320px;right: 100px;}
+		#filed_strike_9{width: 70px;height: 2px;top: 332px;right: 330px;}
+
+		#internal_transfer{right: 358px;top: 383px;}
+		#external_transfer{right: 202px;top: 383px;}
+
+		#name_of_agreement{width: 295px;height: 40px;top: 500px;right:95px;}
+		#qualifying_arrangement_address{width: 300px;height: 90px;top: 545px;right:90px;}
+		#qualifying_arrangement_policy_num{width: 295px;height: 40px;top: 650px;right:95px;}
+
+	
+		/* PAGE 3 END */
+
+
+		/* PAGE 4 */
+
+		#copy_atatched{top: 20px;right: 360px;}
+		#credit_derived_yes{right: 280px;top: 110px;}
+		#credit_derived_no{right: 205px;top: 110px;}
+
+		#transferor_health_yes{right: 278px;top: 200px;}
+		#transferor_health_no{right: 202px;top: 200px;}
+
+		#info_requested_yes{right: 278px;top: 250px;}
+		#info_requested_no{right: 202px;top: 250px;}
+
+
+		/* PAGE 4 END */
+
+
+		/* PAGE 5 */
+
+		#court_directs_strike_page1{width: 600px;height: 2px;top: 14;left: 115px;}
+		#court_directs_strike_page2{width: 600px;height: 2px;top: 32px;left: 115px;}
+		#court_directs_strike_page3{width: 600px;height: 2px;top: 48px;left: 115px;}
+
+		/* PAGE 5 END */

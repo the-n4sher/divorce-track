@@ -1,0 +1,63 @@
+html * {
+    font-family: sans-serif;
+   }
+   
+html, body {
+			margin: 0;
+			padding: 0;
+			position: relative;
+		}
+
+		body > div {
+			background-color: #fff;
+			width: 100%;
+			page-break-after: always;
+			text-align: center;
+			position: relative;
+			margin: 0;
+			padding: 0;
+			z-index: 0;
+		}
+
+		body > *:last-child {
+		    page-break-after: auto;
+		}
+
+
+img {
+	width: 90%;
+	height:auto;
+	margin: 0 3%;
+	position: relative;
+	z-index: 0;
+}
+
+.text,.textarea {
+	position: absolute;
+	z-index: 10;
+	border: none;
+	text-align: left;
+	font-size: 15px;
+}
+
+#petname{top:10px; left:106px; ;width:150px;height:20px;font-size:15px;}
+#petaddress{top:56px; left:113px;width:150px;height:20px;font-size:11.5px;z-index:999;}
+#blank{top:128px; left:110px;height:30px;border:none;}
+#currentdate{top:152px; left:110px;font-size:14px;}
+
+#pet_first_name{top:176px; left:140px;height:30px; width:250px;}
+#cm_name{top:910px;left:104px;}
+
+/* New Styles */
+
+* {
+font-family: Arial !important, sans-serif;
+}
+
+#petname{top:70px; left:210px; ;width:250px;height:20px;font-size:14px;}
+#petaddress{top:90px; left:215px;width:150px;height:100px;font-size:14px;z-index:999;}
+#blank{top:128px; left:110px;height:30px;border:none;}
+#currentdate{top:220px; left:210px;font-size:14px;}
+
+#pet_first_name{top:260px; left:153px;height:30px; width:250px; font-size: 15px;}
+#cm_name{top:791px;left:120px;font-size:15px;}

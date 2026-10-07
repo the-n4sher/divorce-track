@@ -1,0 +1,148 @@
+#-------------------------
+# Operating System Files
+#-------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Linux
+*~
+
+# KDE
+.directory
+
+# Linux trash
+.Trash-*
+
+
+#-------------------------
+# Environment / Local Configuration
+#-------------------------
+
+.env
+.vagrant
+Vagrantfile
+.php-version
+
+
+#-------------------------
+# CodeIgniter Runtime Files
+#-------------------------
+
+writable/attacks/*
+writable/cache/*
+writable/debugbar/*
+writable/logs/*
+writable/pci/*
+writable/session/*
+writable/uploads/*
+
+# Keep CodeIgniter placeholder files
+!writable/cache/index.html
+!writable/debugbar/.gitkeep
+!writable/logs/index.html
+!writable/session/index.html
+!writable/uploads/index.html
+
+php_errors.log
+
+
+#-------------------------
+# User Uploaded Files
+#-------------------------
+
+documents/
+questionnaire_files/
+
+
+#-------------------------
+# Server / Runtime Files
+#-------------------------
+
+cron_logs/
+
+
+#-------------------------
+# Composer
+#-------------------------
+
+vendor/
+
+
+#-------------------------
+# CodeIgniter / User Guide Temporary Files
+#-------------------------
+
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+
+
+#-------------------------
+# Testing
+#-------------------------
+
+tests/coverage*
+phpunit
+/phpunit*.xml
+/.phpunit.*.cache
+
+
+#-------------------------
+# Development / IDE Files
+#-------------------------
+
+# JetBrains / PHPStorm
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+
+# NetBeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# PHP tooling
+.phpintel
+
+
+#-------------------------
+# Other Development Files
+#-------------------------
+
+_modules/*
+/api/
+/results/

@@ -1,0 +1,998 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop {
+        display: none;
+    }   
+
+    .mobile {
+        display: block;
+    }
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body * {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: #16a085;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+body {
+    padding-top: 0px;
+    background-color: #ffffff;
+    background-image: url("../images/white-diamond.png");
+}
+
+#the-side-nav {
+    z-index: 10;
+}
+
+#the-main-content {
+    -webkit-animation-delay: 0.7s; /* Safari 4.0 - 8.0 */
+    animation-delay: 0.7s;
+    margin-top: 20px;
+}
+
+.navbar-brand {
+    font-size: 53px;
+    letter-spacing: -1px;
+    color: #fff !important;
+    margin: 0;
+    width: 100%;
+    background-color: #16a085;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Lobster', sans-serif;
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    background-color: #16a085;
+}
+
+.navbar-brand img {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.navbar i.fa {
+    margin-right: 12px;
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+    left: 12px;
+}
+
+.navbar {
+    background-color: #1abc9c;
+    border-bottom: 1px solid #eee;
+    height: 72px;
+}
+
+.navbar-nav {
+    float: none;
+}
+
+.navbar-collapse {
+    padding-top: 20px;
+    border: none !important;
+}
+
+.navbar-inverse {
+    border: none !important;
+}
+
+.navbar-nav>li {
+    float: none;
+    border-radius: 5px;
+}
+
+.navbar-nav>li a:hover, .navbar-nav>li.active-page a {
+    background-color: #16a085 !important;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    border: none !important;
+    padding: 20px !important;
+    color: #fff;
+    font-size: 16px;
+}
+
+.panel-primary>.panel-heading {
+    background-color: #16a085;
+    border-color: #ddd;
+    text-transform: capitalize;
+}
+
+.panel-primary {
+    border-color: #ddd;
+}
+
+.panel {
+    margin-bottom: 40px;
+}
+
+footer {
+    padding: 20px 0;
+    margin: 40px 0 0;
+    /*background-color: #1abc9c;*/
+}
+
+/* Dashboard */
+
+.table>tbody>tr>td {
+    padding: 16px 8px;
+    vertical-align: middle;
+}
+
+.progress-checklist p {
+    margin: 0;
+}
+
+.progress-checklist em {
+    font-size: 12px;
+}
+
+.progress-checklist span {
+    font-size: 18px;
+    color: #16a085;
+}
+
+.progress-checklist a {
+    text-decoration: underline;
+}
+
+.row-complete p {
+position: relative;
+opacity: 0.4;
+}
+
+.row-complete .dash-check {
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #17a085;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+
+/*.row-complete::after {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #5791c3;
+    font-size: 30px;
+    padding-right: 0.5em;
+    position: absolute;
+    right: 15px;
+    margin-top: -2px;
+}*/
+
+.progress-checklist > p {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.panel-body {
+    padding: 30px 50px 20px;
+}
+
+.ui-accordion .ui-accordion-header {
+    background: #17a085;
+    color: #fff;
+}
+
+.current_court_dates #details-cont > p {
+margin-bottom: 30px;
+text-align: center;
+font-size: 16px;
+}
+
+.current_court_dates .table>tbody>tr>th {
+padding-top: 20px;
+width: 35%;
+padding-right: 10px;
+}
+
+.current_court_dates .last-updated-date .table>tbody>tr>th, .current_court_dates .last-updated-date .table>tbody>tr>td {
+    border: none;
+}
+
+.current_court_dates .last-updated-date .table-hover>tbody>tr:hover {
+    background-color: transparent;
+}
+
+.current_court_dates .last-updated-date {
+    border: none;
+    background: #20c3a3;
+    color: #fff;
+    font-size: 22px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.current_court_dates .last-updated-date .table {
+    margin: 0;
+}
+
+.current_court_dates .last-updated-date input {
+    font-size: 22px;
+    padding: 20px 10px;
+    font-weight: bold;
+}
+
+.dasboard-page .manage-switcher .panel-body {
+    padding: 0;
+}
+
+.dasboard-page .manage-switcher .pay-fees-container {
+    margin: 0;
+}
+
+.dasboard-page .manage-switcher .pay-fees-container > div {
+    margin: 0;
+    width: 50%;
+    border: 1px solid #ccc;
+    float: left;
+    padding: 15px 0;
+}
+
+.dasboard-page .manage-switcher .pay-fees-container > div .btn-primary {
+    font-size: 16px;
+}
+
+.dasboard-page h1.divorceDash {
+    background: #d12f1f;
+    color: #fff !important;
+    margin: -40px 0 70px !important;
+    padding: 20px;
+    font-size: 24px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .panel-body {
+        padding: 20px;
+    }
+
+    .current_court_dates .table>tbody>tr>th, .current_court_dates .table>tbody>tr>td {
+        border: none;
+        display: block;
+        width: 100% !important;
+    }
+
+    .current_court_dates .table>tbody>tr>td {
+        padding-top: 0;
+    }
+
+}
+
+.panel-body hr {
+    margin: 30px;
+}
+
+#idpc_dropdown {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    #the-side-nav {
+        overflow: auto;
+        padding: 0;
+    }
+
+    .navbar-brand {
+        float: left;
+        height: auto;
+        padding-top: 50px !important;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        margin: 0 !important;
+        height: 50px;
+    }
+
+    .navbar-inverse .navbar-collapse {
+        background-color: #16a085;
+        padding: 0 20px;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        padding: 12px !important;
+    }
+
+    .progress-checklist thead {
+        display: none;
+    }
+
+    .progress-checklist tbody td {
+        float: left;
+    }
+
+    .progress-checklist i:before {
+        display: none;
+    }
+
+    .progress-checklist i > span {
+        display: block;
+        width: 100%;
+        color: #222222;
+    }
+
+    .progress-checklist .row-complete p, .row-complete a {
+        opacity: 0.4;
+    }
+
+    .progress-checklist .table>tbody>tr>td:first-child {
+        padding-top: 40px;
+    }
+
+    .progress-checklist .table>tbody>tr>td:last-child {
+        padding-bottom: 40px;
+    }
+
+    .responsive-table {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .responsive-table input, .responsive-table select {
+        min-width: 100px;
+    }
+
+    .responsive-table::before {
+        content: 'Swipe right on the table below to see more >';
+        text-align: left;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #111111;
+        color: #fff;
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    .dasboard-page .manage-switcher .pay-fees-container > div {
+        width: 100%;
+    }
+
+    .dasboard-page .progress-checklist .table>tbody>tr>td {
+        padding: 16px 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    .dasboard-page .progress-checklist .table>tbody>tr.row-complete>td:last-child {
+        padding-bottom: 20px;
+        background-color: #eee;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .dasboard-page .progress-checklist .table>tbody>tr {
+        padding: 30px 0;
+        display: inline-block;
+    }
+
+    .dasboard-page .progress-checklist .table>tbody>tr.row-complete {
+        padding: 30px 0 50px;
+    }
+
+    button.navbar-toggle {
+        border: none !important;
+        background: #156d5c;
+        top: 2px;
+    }
+
+    .navbar-brand img {
+        max-width: 170px;
+        margin: 10px auto 0;
+    }
+
+    #the-main-content {
+        margin-top: -20px;
+    }
+
+    .btn {
+        white-space: normal;
+    }
+
+    .panel-heading > h2 {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.4em;
+        margin: 0 !important;
+    }
+
+    .panel-body > h4 {
+        margin: 0 0 20px;
+        font-size: 17px;
+        line-height: 1.6em;
+    }
+
+}
+
+
+/*  CONTENT ORDER STYLES */
+/*
+.ff_info_box{
+    text-align: center;
+    padding:20px;
+    background-color:#FECABD;
+    margin-bottom:20px;
+}
+*/
+
+.ff_info_box{
+    text-align: center;
+    padding:20px;
+    background-color: #1abc9c;
+    color: #fff;
+    margin-bottom:20px;
+}
+
+.ff_info_box a {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+.lrg-text{
+    font-weight: bold;
+}
+
+.ff-colspan{
+    background-color:#BB1940;
+    color:#fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.error{
+    color:red;
+    font-weight: bold;
+}
+
+/* .table-ff input{
+    width:100%;
+    height:100%!important;
+    padding:10px;
+} */
+
+.coff #stage-image {
+    text-align: center;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.coff .coff-nav {
+    overflow: auto;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 0;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.coff .coff-nav .btn {
+    width: 47%;
+    margin: 0 1.5%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.coff .coff-nav .btn.next-btn {
+    float: right;
+    background-color: #1abc9c;
+    border-color: #16a085;
+}
+
+.coff .coff-nav .btn.next-btn:hover {
+    background-color: #16a085;
+}
+
+.coff .coff-nav .btn.prev-btn {
+    float: left;
+    background: #dedede;
+    color: #171717;
+}
+
+.coff .coff-nav .btn.prev-btn:hover {
+    background: #cccccc;
+}
+
+/*.coff .coff-nav .btn.next-btn::after, .coff .coff-nav .btn.prev-btn::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "FontAwesome";
+    font-weight: 900;
+}
+
+.coff .coff-nav .btn.next-btn::after {
+    content: "\f0a9";
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+.coff .coff-nav .btn.prev-btn::before {
+    content: "\f0a8";
+    color: #111111;
+    margin-right: 10px;
+}*/
+
+.coff .table>tbody>tr>td {
+    text-align: left;
+    vertical-align: top;
+}
+
+.coff .tooltip-icon {
+    font-size: 22px;
+    float: right;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.coff div#normal_process .coff-nav form input.btn.next-btn {
+    float: none;
+}
+
+#tooltip {
+    position: absolute;
+    background: rgba(22, 160, 133, 0.71);
+    color: #ffffff;
+    padding: 8px;
+    z-index: 999;
+    font-weight: bold;
+}
+
+#tooltip.alt-tooltip {
+    background:#16a085;
+}
+
+.beyond-will img {
+    width: 100%;
+    height: auto;
+}
+
+.navbar-collapse .beyond-will img {
+    margin: 10px 0 10px;
+    max-width: 250px;
+}
+
+footer .beyond-will {
+    display: none;
+    margin: -30px 20px 20px;
+    text-align: center;
+}
+
+footer .beyond-will img {
+    max-width: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .navbar-collapse .beyond-will {
+        display: none;
+    }
+
+    footer .beyond-will {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .coff .coff-nav {
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .coff .coff-nav .btn {
+        font-size: 16px;
+    }
+
+    #tooltip {
+        left: 10px !important;
+        max-width: 90%;
+    }
+
+    #tooltip:after {
+        content: 'x';
+        font-weight: bold;
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        font-size: 10px;
+        color: #fff;
+        text-align: center;
+        background: #16a085;
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+    }
+
+}
+
+/*@media only screen and (max-width: 768px) {
+
+.coff .table>tbody>tr {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.coff .table>tbody>tr>td {
+    display: block;
+    width: 100%;
+}
+
+}*/
+
+
+
+
+.pay-fees #details-cont {
+    margin-bottom: 30px;
+ }
+
+ .pay-fees #fee_select, .pay-fees #fee_cc_cont, .pay-fees #pp_cont {
+    max-width: 600px;
+    margin: 0 auto;
+ }
+
+.pay-fees-container {
+    overflow: auto;
+    margin: 30px 20px;
+}
+
+.pay-fees-container > div {
+    width: 48%;
+    float: left;
+    margin: 0 1%;
+    text-align: center;
+}
+
+.pay-fees-container > div img {
+    max-width: 100%;
+    display: block;
+    margin: 0px auto 20px;
+}
+
+ @media only screen and (max-width: 1180px) {
+    .pay-fees-container {
+        margin: 30px 0px;
+    }
+    .pay-fees-container > div {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .pay-fees-container {
+        margin: 30px 0px;
+    }
+    .pay-fees-container > div {
+        width: 100%;
+        margin: 0 0 15px;
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .pay-fees-container .btn {
+        font-size: 12px;
+    }
+}
+
+.announcement-banner {
+    background-color: #172244;
+    padding: 12px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99999;
+}
+
+.announcement-banner a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Notification Styles */
+
+.consent-doc-number {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: blue;
+    color: #fff;
+    display: inline-block;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.notification-number {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #c21515;
+    color: #fff;
+    display: inline-block;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.notification-item {
+    position: relative;
+}
+
+.notification-item .notification-date {
+    position: absolute;
+    right: 50px;
+    top: 36px;
+}
+
+.notification-item .notification-title {
+    text-align: left;
+    margin-top: 0;
+    padding-right: 180px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.notification-icon {
+    position: fixed;
+    right: 70px;
+    top: 10px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.notification-icon .notification-number {
+    position: absolute;
+    right: 7px;
+    top: -4px;
+}
+
+.notification-holder {
+    position: relative;
+    z-index: 9999;
+}
+
+.notification-popup {
+    position: fixed;
+    background-color: #fff;
+    border-radius: 10px;
+    top: 56px;
+    width: 94%;
+    right: 10px;
+    border: 1px solid #ddd;
+    padding: 5px 20px;
+    display: none;
+    max-width: 450px;
+}
+
+.notification-popup-item {
+    margin: 20px 10px 20px 0px;
+}
+
+.notification-popup .notification-title {
+    padding: 0 0 5px;
+}
+
+.notification-popup a {
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 5px 7px;
+    border-radius: 4px;
+}
+
+.notification-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-weight: bold;
+    padding: 5px 7px;
+    cursor: pointer;
+}
+
+.navbar-header {
+    position: relative;
+    z-index: 400;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    padding: 15px 10px 15px 40px !important;
+    font-size: 15px !important;
+}
+
+.navbar-inverse .navbar-collapse {
+    position: relative;
+    z-index: 500;
+}
+
+.accepted-payment-methods {
+    max-width: 300px !important;
+    margin-top: 25px !important;
+    margin-bottom: 0 !important;
+}
+
+.upgrades-payment-btn {
+    margin: 20px 0 -10px 6px !important;
+}
+
+.consent-page-12 form {
+    border: 2px dashed #ccc;
+    padding: 25px 30px 30px;
+    margin: 40px 0 10px;
+}
+
+.consent-page-12 input#files {
+    border: aliceblue;
+    padding: 14px;
+    width: 100%;
+    text-align: center;
+    margin: 23px 0;
+    cursor: pointer;
+    background: #eee;
+    color: #000;
+    font-weight: 700;
+}
+
+.consent-page-12 input[type="submit"] {
+    background: #1abc9c;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 769px) {
+
+.notification-icon {
+    top: 20px;
+    right: 20px;
+    background: #16a085;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.notification-icon .notification-number {
+    position: absolute;
+    right: 32px;
+    top: -3px;
+}
+
+.notification-popup {
+    top: 10px;
+    right: 80px;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+.navbar-inverse .navbar-nav>li>a {
+    padding: 6px !important;
+    font-size: 15px !important;;
+}
+
+.notification-item .notification-date {
+    position: relative;
+    right: auto;
+    top: auto;
+}
+
+.notification-item .notification-title {
+    padding-right: 0;
+}
+
+}
+
+.container {
+    max-width: 100%;
+}
+
+/* Kamal fixes April 2024 */
+
+body {
+    background: #fafafa !important;
+}
+
+div#the-main-content > div > br {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+.navbar-fixed-side {
+    display: block !important;
+}
+
+.navbar-brand {
+    margin-top: 0px;
+    display: block !important;
+    padding: 5px 7px 3px !important;
+    position: absolute;
+    width: auto;
+    height: 100%;
+}
+
+.navbar-brand img {
+    max-width: 170px;
+    max-height: 100%;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #16a085;
+}
+
+#the-side-nav {
+    height: 50px;
+}
+
+#the-main-content {
+    padding-top: 0px;
+    margin-top: 20px;
+}
+
+button.navbar-toggle {
+    background: #156d5c !important;
+}
+
+#page-wrapper > .row {
+    margin: 0;
+}
+
+
+body .navbar-inverse .navbar-nav>li>a {
+    padding: 15px 10px 15px 40px !important;
+}
+
+}
+
+/* End Kamal fixes April 2024 */

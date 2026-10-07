@@ -1,0 +1,510 @@
+html * {
+				font-family: sans-serif;
+			}
+
+			html, body {
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+
+			body > div {
+				background-color: #fff;
+				width: 100%;
+				page-break-after: always;
+				text-align: center;
+				position: relative;
+				margin: 0;
+				padding: 0;
+			}
+
+			 body > *:last-child {
+		       page-break-after: auto;
+		   }
+
+			img {
+				width: 85%;
+				height:auto;
+				margin: 0 3%;
+				position: relative;
+				z-index: 0;
+			}
+
+			.text,.textarea {
+				position: absolute;
+				z-index: 10;
+				border: none;
+				text-align: left;
+				font-size: 15px;
+			}
+
+			.tick {
+				width: 10px;
+				height: 10px;
+			}
+
+			.strike {
+				position: absolute;
+				z-index: 10;
+				height: 100px;
+				border-top: 2px solid #000;
+				color:red;
+			}
+
+
+			.small-character {
+				line-height: 0.9;
+				width: 10px;
+				height: 10px;
+			}
+
+			#court-name{
+				width: 183px;
+				height: 21px;
+				top: 75px;
+				right: 216px;
+			}
+
+			#case-no{
+				width: 110px;
+				height: 21px;
+				top: 73px;
+				right: 84px;
+			}
+
+			#petitioner-name{
+				width: 280px;
+				height: 21px;
+				top: 126px;
+				right: 118px;
+			}
+
+			#respondent-name{
+				width: 280px;
+				height: 21px;
+				top: 180px;
+				right: 118px;
+			}
+
+			#divorce-box {
+				top: 337px;
+				left: 260px;
+			}
+
+			#dissolution-box {
+				top: 337px;
+				left: 327px;
+			}
+
+			#judicial-box {
+				top: 337px;
+				left: 417px;
+			}
+
+			#yes1-box {
+				top: 365px;
+				left: 85px;
+			}
+
+			#no1-box {
+				top: 365px;
+				left: 151px;
+			}
+
+			#yes2-box {
+				top: 423px;
+				left: 85px;
+			}
+
+			#no2-box {
+				top: 423px;
+				left: 151px;
+			}
+
+			#alter2-reason {
+				top: 472px;
+				left: 96px;
+				width: 640px;
+				height: 110px;
+			}
+
+			#yes3-box {
+				top: 659px;
+				left: 85px;
+			}
+
+			#no3-box {
+				top: 659px;
+				left: 151px;
+			}
+
+			#alter3-reason {
+				top: 726px;
+				left: 96px;
+				width: 640px;
+				height: 110px;
+			}
+
+			#day1 {
+				top: 883px;
+				left: 93px;
+			}
+
+			#day2 {
+				top: 883px;
+				left: 111px;
+			}
+
+			#month1 {
+				top: 883px;
+				left: 137px;
+			}
+
+			#month2 {
+				top: 883px;
+				left: 154px;
+			}
+
+			#year1 {
+				top: 883px;
+				left: 180px;
+			}
+
+			#year2 {
+				top: 883px;
+				left: 197px;
+			}
+
+			#year3 {
+				top: 883px;
+				left: 215px;
+			}
+
+			#year4 {
+				top: 883px;
+				left: 233px;
+			}
+
+
+			#day3 {
+				top: 940px;
+				left: 94px;
+			}
+
+			#day4 {
+				top: 940px;
+				left: 111px;
+			}
+
+			#month3 {
+				top: 940px;
+				left: 137px;
+			}
+
+			#month4 {
+				top: 940px;
+				left: 154px;
+			}
+
+			#year5 {
+				top: 940px;
+				left: 180px;
+			}
+
+			#year6 {
+				top: 940px;
+				left: 197px;
+			}
+
+			#year7 {
+				top: 940px;
+				left: 215px;
+			}
+
+			#year8 {
+				top: 940px;
+				left: 233px;
+			}
+
+			#separated-date1 {
+				width: 55px;
+				height: 21px;
+				top: 115px;
+				left: 95px;
+				font-size: 13px;
+			}
+
+			#sep-address1 {
+				width: 248px;
+				height: 64px;
+				top: 113px;
+				left: 160px;
+				font-size: 13px;
+			}
+
+			#date_to1{top: 135px;left: 95px;width:40px;}
+			#date_to2{top: 135px;left: 419px;width:40px;}
+
+			#separated-date2 {
+				width: 55px;
+				height: 21px;
+				top: 188px;
+				left: 95px;
+				font-size: 13px;
+			}
+
+			#sep-address2 {
+				width: 248px;
+				height: 64px;
+				top: 188px;
+				left: 160px;
+				font-size: 13px;
+			}
+
+			#separated-date3 {
+				width: 55px;
+				height: 21px;
+				top: 263px;
+				left: 95px;
+				font-size: 13px;
+			}
+
+			#sep-address3 {
+				width: 248px;
+				height: 64px;
+				top: 263px;
+				left: 160px;
+				font-size: 13px;
+			}
+
+			#separated-date4 {
+				width: 55px;
+				height: 21px;
+				top: 337px;
+				left: 95px;
+				font-size: 13px;
+			}
+
+			#sep-address4 {
+				width: 248px;
+				height: 64px;
+				top: 337px;
+				left: 160px;
+				font-size: 13px;
+			}
+
+			#separated-date5 {
+				width: 55px;
+				height: 21px;
+				top: 115px;
+				left: 419px;
+				font-size: 13px;
+			}
+
+			#sep-address5 {
+				width: 250px;
+				height: 64px;
+				top: 113px;
+				left: 484px;
+				font-size: 13px;
+			}
+
+			#separated-date6 {
+				width: 55px;
+				height: 21px;
+				top: 188px;
+				left: 419px;
+				font-size: 13px;
+			}
+
+			#sep-address6 {
+				width: 250px;
+				height: 64px;
+				top: 188px;
+				left: 484px;
+				font-size: 13px;
+			}
+
+			#separated-date7 {
+				width: 55px;
+				height: 21px;
+				top: 263px;
+				left: 419px;
+				font-size: 13px;
+			}
+
+			#sep-address7 {
+				width: 250px;
+				height: 64px;
+				top: 263px;
+				left: 484px;
+				font-size: 13px;
+			}
+
+			#separated-date8 {
+				width: 55px;
+				height: 21px;
+				top: 337px;
+				left: 419px;
+				font-size: 13px;
+			}
+
+			#sep-address8 {
+				width: 250px;
+				height: 64px;
+				top: 337px;
+				left: 484px;
+				font-size: 13px;
+			}
+
+			#yes4-box {
+				top: 479px;
+				left: 85px;
+			}
+
+			#no4-box {
+				top: 479px;
+				left: 151px;
+			}
+
+			#domestic_address1{top:585px;left:95px;width:300px;height:50px;font-family: inherit;font-size: inherit;font-weight: inherit;}
+			#address1_day_digit1{top:608px;left:415px;}
+			#address1_day_digit2{top:608px;left:432px;}
+			#address1_month_digit1{top:608px;left:457px;}
+			#address1_month_digit2{top:608px;left:474px;}
+			#address1_year_digit1{top:608px;left:500px;}
+			#address1_year_digit2{top:608px;left:518px;}
+			#address1_year_digit3{top:608px;left:535px;}
+			#address1_year_digit4{top:608px;left:552px;}
+			#address1_to_day_digit1{top:608px;left:584px;}
+			#address1_to_day_digit2{top:608px;left:602px;}
+			#address1_to_month_digit1{top:608px;left:628px;}
+			#address1_to_month_digit2{top:608px;left:646px;}
+			#address1_to_year_digit1{top:608px;left:671px;}
+			#address1_to_year_digit2{top:608px;left:688px;}
+			#address1_to_year_digit3{top:608px;left:706px;}
+			#address1_to_year_digit4{top:608px;left:723px;}
+
+			#domestic_address2{top:655px;left:95px;width:300px;height:50px;font-family: inherit;font-size: inherit;font-weight: inherit;}
+			#address2_day_digit1{top:674px;left:415px;}
+			#address2_day_digit2{top:674px;left:432px;}
+			#address2_month_digit1{top:674px;left:457px;}
+			#address2_month_digit2{top:674px;left:474px;}
+			#address2_year_digit1{top:674px;left:500px;}
+			#address2_year_digit2{top:674px;left:518px;}
+			#address2_year_digit3{top:674px;left:535px;}
+			#address2_year_digit4{top:674px;left:552px;}
+			#address2_to_day_digit1{top:674px;left:584px;}
+			#address2_to_day_digit2{top:674px;left:602px;}
+			#address2_to_month_digit1{top:674px;left:628px;}
+			#address2_to_month_digit2{top:674px;left:646px;}
+			#address2_to_year_digit1{top:674px;left:671px;}
+			#address2_to_year_digit2{top:674px;left:688px;}
+			#address2_to_year_digit3{top:674px;left:706px;}
+			#address2_to_year_digit4{top:674px;left:723px;}
+
+			#domestic_address3{top:720px;left:95px;width:300px;height:50px;font-family: inherit;font-size: inherit;font-weight: inherit;}
+			#address3_day_digit1{top:740px;left:415px;}
+			#address3_day_digit2{top:740px;left:432px;}
+			#address3_month_digit1{top:740px;left:457px;}
+			#address3_month_digit2{top:740px;left:474px;}
+			#address3_year_digit1{top:740px;left:500px;}
+			#address3_year_digit2{top:740px;left:518px;}
+			#address3_year_digit3{top:740px;left:535px;}
+			#address3_year_digit4{top:740px;left:552px;}
+			#address3_to_day_digit1{top:740px;left:584px;}
+			#address3_to_day_digit2{top:740px;left:602px;}
+			#address3_to_month_digit1{top:740px;left:628px;}
+			#address3_to_month_digit2{top:740px;left:646px;}
+			#address3_to_year_digit1{top:740px;left:671px;}
+			#address3_to_year_digit2{top:740px;left:688px;}
+			#address3_to_year_digit3{top:740px;left:706px;}
+			#address3_to_year_digit4{top:740px;left:723px;}
+
+			#identify-box {
+				top: 35px;
+				left: 200px;
+			}
+
+			#identify-spouse-box {
+				top: 68px;
+				left: 322px;
+			}
+
+			#identify-civil-box {
+				top: 68px;
+				left: 395px;
+			}
+
+			#identify-statement {
+				top: 150px;
+				left: 200px;
+			}
+
+			#identify-day1 {
+				top: 164px;
+				left: 286px;
+			}
+
+			#identify-day2 {
+				top: 164px;
+				left: 304px;
+			}
+
+			#identify-month1 {
+				top: 164px;
+				left: 328px;;
+			}
+
+			#identify-month2 {
+				top: 164px;
+				left: 346px;
+			}
+
+			#identify-year1 {
+				top: 164px;
+				left: 370px;
+			}
+
+			#identify-year2 {
+				top: 164px;
+				left: 388px;
+			}
+
+			#identify-year3 {
+				top: 164px;
+				left: 406px;
+			}
+
+			#identify-year4 {
+				top: 164px;
+				left: 425px;
+			}
+
+			#dissolving_marriage{top:320px;left:386px;}
+			#dissolving_civil_partnership{top:320px;left:463px;}
+			#dissolving_seperation{top:320px;left:601px;}
+			#dissolving_respondent_costs{top:363px;left:41px;}
+
+			#support_of_petition_for_divorce{width:46px; height:20px;top:518px;left:558px;}
+			#support_of_petition_for_seperation{width:122px; height:20px;top:518px;left:605px;}
+
+			#fullname{top:572px;left:195px;width:350px;}
+
+
+			#signed_day_digit1{top:634px;left:553px;}
+			#signed_day_digit2{top:634px;left:571px;}
+			#signed_month_digit1{top:634px;left:596px;}
+			#signed_month_digit2{top:634px;left:614px;}
+			#signed_year_digit1{top:634px;left:640px;}
+			#signed_year_digit2{top:634px;left:657px;}
+			#signed_year_digit3{top:634px;left:674px;}
+			#signed_year_digit4{top:634px;left:692px;}
+
+			.strike {
+				position: absolute;
+				z-index: 10;
+				height: 100px;
+				border-top: 2px solid #000;
+				color:red;
+			}

@@ -1,0 +1,169 @@
+html * {
+    font-family: sans-serif;
+   }
+   
+html, body {
+			margin: 0;
+			padding: 0;
+			position: relative;
+		}
+
+		body > div {
+			background-color: #fff;
+			width: 100%;
+			page-break-after: always;
+			text-align: center;
+			position: relative;
+			margin: 0;
+			padding: 0;
+			z-index: 0;
+		}
+
+body > *:last-child {
+    page-break-after: auto;
+}
+
+img {
+	width: 85%;
+	height:auto;
+	margin: 0 3%;
+	position: relative;
+	z-index: 0;
+}
+
+.text,.textarea  {
+			position: absolute;
+			z-index: 10;
+			border: none;
+			text-align: left;
+			font-size: 15px;
+		}
+
+.tick {
+	width: 10px;
+	height: 10px;
+}
+
+.small-character {
+	line-height: 0.9;
+	width: 10px;
+	height: 10px;
+}
+
+.strike {
+		position: absolute;
+		z-index: 10;
+		height: 100px;
+		border-top: 2px solid #000;
+		color:red;
+}
+
+/* PAGE 1 */
+#court_name{top:74px;left:405px;height:20px;width:200px;}
+#case_num{top:70px;left:613px;height:20px;width:120px;}
+#pet_name{top:125px;left:405px;height:20px;width:300px;}
+#res_name{top:175px;left:405px;height:20px;width:300px;}
+#co_res_name{top:236px;left:405px;height:20px;width:300px;}
+
+#last_add_digit1{top:417px;left:135px;}
+#last_add_digit2{top:417px;left:153px;}
+#last_add_digit3{top:417px;left:179px;}
+#last_add_digit4{top:417px;left:196px;}
+
+#last_add_digit5{top:417px;left:222px;}
+#last_add_digit6{top:417px;left:240px;}
+#last_add_digit7{top:417px;left:257px;}
+#last_add_digit8{top:417px;left:275px;}
+
+#last_address{font-size:11.5px;top: 423px;width: 355px;left:376px;height:70px;}
+
+#last_add_pc1{top:500px;left:588px;}
+#last_add_pc2{top:500px;left:606px;}
+#last_add_pc3{top:500px;left:624px;}
+#last_add_pc4{top:500px;left:642px;}
+
+#last_add_pc5{top:500px;left:671px;}
+#last_add_pc6{top:500px;left:688px;}
+#last_add_pc7{top:500px;left:706px;}
+#last_add_pc8{top:500px;left:724px;}
+
+#res_after_address_1{top: 617px;left: 98px;width: 310px;height: 53px;font-size: 11.5px;}
+#res_after_address_res{top:617px;left:422px;width: 310px;height: 53px;font-size: 11.5px;}
+
+#res_after_address_2{top: 686px;left: 98px;width: 310px;height: 53px;font-size: 11.5px;}
+#res_after_address_res2{top:686px;left:422px;width: 310px;height: 53px;font-size: 11.5px;}
+
+#res_last_seen_digit1{top:786px;left:136px;}
+#res_last_seen_digit2{top:786px;left:153px;}
+#res_last_seen_digit3{top:786px;left:178px;}
+#res_last_seen_digit4{top:786px;left:197px;}
+
+#res_last_seen_digit5{top:786px;left:221px;}
+#res_last_seen_digit6{top:786px;left:240px;}
+#res_last_seen_digit7{top:786px;left:257px;}
+#res_last_seen_digit8{top:786px;left:275px;}
+
+#trace_info{top:862px;left:95px;width:636px;height:97px;font-size:12px;}
+
+
+/* PAGE 1 END */
+
+
+/* PAGE 2  */
+#relatives{top:93px;left:99px;width:635px;height:162px;font-size: 11.5px;}
+#child_contact{top:350px;left:97px;width:635px;height:128px;font-size: 11.5px;}
+#last_employer{top:575px;left:99px;width:635px;height:160px;font-size: 11.5px;}
+
+#bank_yes{top:776px;left:596px;}
+#bank_no{top:776px;left:663px;}
+#union_yes{top:794px;left:596px;}
+#union_no{top:794px;left:663px;}
+#enquiry_results{top:841px;left:99px;width:635px;height:125px;font-size: 11.5px;}
+/* PAGE 2  END */
+
+
+/* PAGE 3 */
+#court_order_yes{top:33px;left:596px;}
+#court_order_no{top:33px;left:663px;}
+#court_result{top:75px;left:99px;width:635px;height:195px;font-size: 11.5px;}
+
+#child_support_yes{top:317px;left:596px;}
+#child_support_no{top:317px;left:663px;}
+#res_whereabouts{top:364px;left:95px;width:635px;height:195px;font-size: 11.5px;}
+#res_other_enq{top:665px;left:95px;width:638px;height:195px;font-size: 11.5px;}
+
+/* PAGE 3  END */
+
+
+/*  PAGE 4 */
+#iam_the_pet{top:142px;left:176px;}
+#answers_to{top:167px;left:176px;}
+#i_produce{top:194px;left:176px;}
+
+#para2{top:213px;left:206px;}
+#para3{top:213px;left:243px;}
+#para4{top:213px;left:278px;}
+#para5{top:213px;left:315px;}
+#para6{top:213px;left:351px;}
+#para7{top:213px;left:387px;}
+#para8{top:213px;left:423px;}
+#para9{top:213px;left:459px;}
+#para10{top:213px;left:495px;}
+#and_marked{top: 252px;left: 230px;width: 422px;height: 65px;font-size:11.5px;}
+#no_other_enq{top:351px;left:177px;}
+#ask_the_court{top:398px;left:177px;}
+/*  PAGE 4 END */
+
+
+#petf_name{top:488px;left:230px;}
+#petaddress{top:534px;left:230px;font-size:11px;height:80px;}
+
+#postcode1{top: 598px;left: 507px;}
+#postcode2{top: 598px;left: 525px;}
+#postcode3{top: 598px;left: 543px;}
+
+#postcode4{top: 598px;left: 561px;}
+#postcode5{top: 598px;left: 588px;}
+#postcode6{top: 598px;left: 606px;}
+#postcode7{top: 598px;left: 625px;}
+#postcode8{top: 598px;left: 643px;}

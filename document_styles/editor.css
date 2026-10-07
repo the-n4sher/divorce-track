@@ -1,0 +1,8 @@
+body {background-color:#ddd; background-image: url('http://www.clipartkid.com/images/703/draft-watermark-confidential-and-draft-bO5iu8-clipart.png')}
+img {width: 693px;margin: 0 2.3%;}
+body > div {width: 803px; margin: 0 auto; box-shadow: 0px 0px 3px #aaa;}
+.small-character { width: 12px; height: 16px; margin-left: -2px; margin-top: 2px;}
+.tick,.strike {cursor: pointer;} .tick:hover,.strike:hover {opacity: 0.5}
+#save_button_container{width:100%;position: fixed;background-color:#ccc;top: 0;left: 0;z-index: 999;height: 30px;opacity: 0.8;padding:5px;}
+button#save_document{background-color:red;color:#fff;padding:5px;cursor: pointer;}
+.elmHidden{opacity:0!important;}

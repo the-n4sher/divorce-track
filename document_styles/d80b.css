@@ -1,0 +1,199 @@
+html, body {
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+
+			body > div {
+				background-color: #fff;
+				width: 100%;
+				page-break-after: always;
+				text-align: center;
+				position: relative;
+				margin: 0;
+				padding: 0;
+			}
+
+			body > *:last-child {
+			    page-break-after: auto;
+			}
+
+			img {
+				width: 85%;
+				height:auto;
+				margin: 0 3%;
+				position: relative;
+				z-index: 0;
+			}
+
+			.text,.textarea {
+				position: absolute;
+				z-index: 10;
+				border: none;
+				text-align: left;
+				font-size: 15px;
+			}
+
+			.tick {
+				width: 10px;
+				height: 10px;
+			}
+
+			.strike {
+				position: absolute;
+				z-index: 10;
+				height: 100px;
+				border-top: 2px solid #000;
+				color:red;
+			}
+
+			.small-character {
+				line-height: 0.9;
+				width: 10px;
+				height: 10px;
+			}
+
+			#court-name{
+				width: 183px;
+				height: 21px;
+				top: 75px;
+				right: 216px;
+			}
+
+			#case-no{
+				width: 110px;
+				height: 21px;
+				top: 73px;
+				right: 84px;
+			}
+
+			#petitioner-name{
+				width: 280px;
+				height: 21px;
+				top: 126px;
+				right: 118px;
+			}
+
+			#respondent-name{
+				width: 280px;
+				height: 21px;
+				top: 180px;
+				right: 118px;
+			}
+
+			#petition_divorce{top:293px;left:260px;}
+			#petition_dissolutiion{top:293px;left:328px;}
+			#petition_separation{top:293px;left:418px;}
+			#petition_read_yes{top:322px;left:85px;}
+			#petition_read_no{top:322px;left:152px;}
+			#alter_yes{top:382px;left:85px;}
+			#alter_no{top:382px;left:152px;}
+			#alter-reason{top:434px;left:98px;width:638px;height:110px;font-family: inherit;font-size: inherit;font-weight: inherit;}
+			#alteration_true_yes{top:619px;left:85px;}
+			#alteration_true_no{top:619px;left:152px;}
+			#not-within-knowledge{top:685px;left:98px;width:638px;height:110px;font-family: inherit;font-size: inherit;font-weight: inherit;}
+			#affected_health{top:850px;left:98px;width:638px;height:110px;font-family: inherit;font-size: inherit;font-weight: inherit;}
+
+			/* Page 2 */
+			#behaviour_continuing_yes{top:62px;left:85px;}
+			#behaviour_continuing_no{top:62px;left:152px;}
+
+			#final_incident_day_digit1{top:137px;left:95px;}
+			#final_incident_day_digit2{top:137px;left:112px;}
+			#final_incident_month_digit1{top:137px;left:138px;}
+			#final_incident_month_digit2{top:137px;left:156px;}
+
+			#final_incident_year_digit1{top:137px;left:182px;}
+			#final_incident_year_digit2{top:137px;left:198px;}
+			#final_incident_year_digit3{top:137px;left:216px;}
+			#final_incident_year_digit4{top:137px;left:234px;}
+
+			#lived_same_address_yes{top:253px;left:71px;}
+			#lived_same_address_no{top:253px;left:138px;}
+
+			#domestic_address1{top:365px;left:95px;width:300px;height:50px;font-family: inherit;font-size: inherit;font-weight: inherit;}
+			#address1_day_digit1{top:388px;left:415px;}
+			#address1_day_digit2{top:388px;left:432px;}
+			#address1_month_digit1{top:388px;left:457px;}
+			#address1_month_digit2{top:388px;left:474px;}
+			#address1_year_digit1{top:388px;left:500px;}
+			#address1_year_digit2{top:388px;left:518px;}
+			#address1_year_digit3{top:388px;left:535px;}
+			#address1_year_digit4{top:388px;left:552px;}
+			#address1_to_day_digit1{top:388px;left:584px;}
+			#address1_to_day_digit2{top:388px;left:602px;}
+			#address1_to_month_digit1{top:388px;left:628px;}
+			#address1_to_month_digit2{top:388px;left:646px;}
+			#address1_to_year_digit1{top:388px;left:671px;}
+			#address1_to_year_digit2{top:388px;left:688px;}
+			#address1_to_year_digit3{top:388px;left:706px;}
+			#address1_to_year_digit4{top:388px;left:723px;}
+
+			#domestic_address2{top:435px;left:95px;width:300px;height:50px;font-family: inherit;font-size: inherit;font-weight: inherit;}
+			#address2_day_digit1{top:454px;left:415px;}
+			#address2_day_digit2{top:454px;left:432px;}
+			#address2_month_digit1{top:454px;left:457px;}
+			#address2_month_digit2{top:454px;left:474px;}
+			#address2_year_digit1{top:454px;left:500px;}
+			#address2_year_digit2{top:454px;left:518px;}
+			#address2_year_digit3{top:454px;left:535px;}
+			#address2_year_digit4{top:454px;left:552px;}
+			#address2_to_day_digit1{top:454px;left:584px;}
+			#address2_to_day_digit2{top:454px;left:602px;}
+			#address2_to_month_digit1{top:454px;left:628px;}
+			#address2_to_month_digit2{top:454px;left:646px;}
+			#address2_to_year_digit1{top:454px;left:671px;}
+			#address2_to_year_digit2{top:454px;left:688px;}
+			#address2_to_year_digit3{top:454px;left:706px;}
+			#address2_to_year_digit4{top:454px;left:723px;}
+
+			#domestic_address3{top:500px;left:95px;width:300px;height:50px;font-family: inherit;font-size: inherit;font-weight: inherit;}
+			#address3_day_digit1{top:520px;left:415px;}
+			#address3_day_digit2{top:520px;left:432px;}
+			#address3_month_digit1{top:520px;left:457px;}
+			#address3_month_digit2{top:520px;left:474px;}
+			#address3_year_digit1{top:520px;left:500px;}
+			#address3_year_digit2{top:520px;left:518px;}
+			#address3_year_digit3{top:520px;left:535px;}
+			#address3_year_digit4{top:520px;left:552px;}
+			#address3_to_day_digit1{top:520px;left:584px;}
+			#address3_to_day_digit2{top:520px;left:602px;}
+			#address3_to_month_digit1{top:520px;left:628px;}
+			#address3_to_month_digit2{top:520px;left:646px;}
+			#address3_to_year_digit1{top:520px;left:671px;}
+			#address3_to_year_digit2{top:520px;left:688px;}
+			#address3_to_year_digit3{top:520px;left:706px;}
+			#address3_to_year_digit4{top:520px;left:723px;}
+
+			#sharing-accomodation{top:585px;left:95px;width:640px;height:130px;font-family: inherit;font-size: inherit;font-weight: inherit;}
+			
+			/*  PAGE 3 */
+			#identify_signature{top:60px;left:212px;}
+			#spouse_signature{top:96px;left:336px;}
+			#civil_partner_signature{top:96px;left:414px;}
+			#dissolving_marriage{top:311px;left:394px;}
+			#dissolving_civil_partnership{top:311px;left:472px;}
+			#dissolving_seperation{top:311px;left:609px;}
+			#dissolving_respondent_costs{top:354px;left:49px;}
+
+			#support_of_petition_for_divorce{width:46px; height:20px;top:535px;left:558px;}
+			#support_of_petition_for_seperation{width:120px; height:20px;top:535px;left:610px;}
+			 
+
+			#fullname{top:587px;left:205px;width:350px;}
+			#signed_day_digit1{top:649px;left:562px;}
+			#signed_day_digit2{top:649px;left:580px;}
+			#signed_month_digit1{top:649px;left:604px;}
+			#signed_month_digit2{top:649px;left:622px;}
+			#signed_year_digit1{top:649px;left:649px;}
+			#signed_year_digit2{top:649px;left:666px;}
+			#signed_year_digit3{top:649px;left:683px;}
+			#signed_year_digit4{top:649px;left:700px;}
+
+			.strike {
+				position: absolute;
+				z-index: 10;
+				height: 100px;
+				border-top: 2px solid #000;
+				color:red;
+			}

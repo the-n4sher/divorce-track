@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop {
+        display: none;
+    }   
+
+    .mobile {
+        display: block; 
+    }
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body * {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: #16a085;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+body {
+    padding-top: 0px;
+    background-color: #ffffff;
+    background-image: url("../images/white-diamond.png");
+}
+
+#the-side-nav {
+    z-index: 10;
+}
+
+#the-main-content {
+    -webkit-animation-delay: 0.7s; /* Safari 4.0 - 8.0 */
+    animation-delay: 0.7s;
+    margin-top: 20px;
+}
+
+.navbar-brand {
+    font-size: 53px;
+    letter-spacing: -1px;
+    color: #fff !important;
+    margin: 0;
+    width: 100%;
+    background-color: #16a085;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Lobster', sans-serif;
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    background-color: #16a085;
+}
+
+.navbar-brand img {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.navbar i.fa {
+    margin-right: 12px;
+    font-size: 25px;
+    position: relative;
+    top: 2px;
+}
+
+.navbar {
+    background-color: #1abc9c;
+    border-bottom: 1px solid #eee;
+    height: 72px;
+}
+
+.navbar-nav {
+    float: none;
+}
+
+.navbar-collapse {
+    padding-top: 20px;
+    border: none !important;
+}
+
+.navbar-inverse {
+    border: none !important;
+}
+
+.navbar-nav>li {
+    float: none;
+    border-radius: 5px;
+}
+
+.navbar-nav>li a:hover, .navbar-nav>li.active-page a {
+    background-color: #16a085 !important;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    border: none !important;
+    padding: 20px !important;
+    color: #fff;
+    font-size: 16px;
+}
+
+.panel-primary>.panel-heading {
+    background-color: #16a085;
+    border-color: #ddd;
+}
+
+.panel-primary {
+    border-color: #ddd;
+}
+
+footer {
+    padding: 20px 0;
+    margin: 40px 0 0;
+    /*background-color: #1abc9c;*/
+}
+
+/* Dashboard */
+
+.table>tbody>tr>td {
+    padding: 16px 8px;
+    vertical-align: middle;
+}
+
+.progress-checklist p {
+    margin: 0;
+}
+
+.progress-checklist em {
+    font-size: 12px;
+}
+
+.progress-checklist span {
+    font-size: 18px;
+    color: #16a085;
+}
+
+.progress-checklist a {
+    text-decoration: underline;
+}
+
+.row-complete p {
+position: relative;
+opacity: 0.4;
+}
+
+.row-complete .dash-check {
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #17a085;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+
+/*.row-complete::after {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: #5791c3;
+    font-size: 30px;
+    padding-right: 0.5em;
+    position: absolute;
+    right: 15px;
+    margin-top: -2px;
+}*/
+
+.progress-checklist > p {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.panel-body {
+    padding: 30px 50px 20px;
+}
+
+.ui-accordion .ui-accordion-header {
+    background: #17a085;
+    color: #fff;
+}
+
+.beyond-will img {
+    width: 100%;
+    height: auto;
+}
+
+.navbar-collapse .beyond-will img {
+    margin: 10px 0 10px;
+    max-width: 250px;
+}
+
+footer .beyond-will {
+    display: none;
+    margin: -30px 20px 20px;
+    text-align: center;
+}
+
+footer .beyond-will img {
+    max-width: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .navbar-collapse .beyond-will {
+        display: none;
+    }
+
+    footer .beyond-will {
+        display: block;
+    }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+    .panel-body {
+        padding: 20px;
+    }
+}
+
+.panel-body hr {
+    margin: 30px;
+}
+
+#idpc_dropdown {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    #the-side-nav {
+        overflow: auto;
+        padding: 0;
+    }
+
+    .navbar-brand {
+        float: left;
+        height: auto;
+        padding-top: 50px !important;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        margin: 0 !important;
+        height: 50px;
+    }
+
+    .navbar-inverse .navbar-collapse {
+        background-color: #16a085;
+        padding: 0 20px;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        padding: 12px !important;
+    }
+
+    .progress-checklist thead {
+        display: none;
+    }
+
+    .progress-checklist tbody td {
+        float: left;
+    }
+
+    .progress-checklist i:before {
+        display: none;
+    }
+
+    .progress-checklist i > span {
+        display: block;
+        width: 100%;
+        color: #222222;
+    }
+
+    .progress-checklist .row-complete p, .row-complete a {
+        opacity: 0.4;
+    }
+
+    .progress-checklist .table>tbody>tr>td:first-child {
+        padding-top: 40px;
+    }
+
+    .progress-checklist .table>tbody>tr>td:last-child {
+        padding-bottom: 40px;
+    }
+
+    .responsive-table {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .responsive-table input, .responsive-table select {
+        min-width: 100px;
+    }
+
+    .responsive-table::before {
+        content: 'Swipe right on the table below to see more >';
+        text-align: left;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #111111;
+        color: #fff;
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+}
+
+
+
+.pay-fees #details-cont {
+    margin-bottom: 30px;
+ }
+
+.pay-fees #fee_select, .pay-fees #fee_cc_cont, .pay-fees #pp_cont {
+    max-width: 600px;
+    margin: 0 auto;
+ }
+
+.pay-fees .pay-fees-container {
+    overflow: auto;
+    margin: 30px 20px;
+}
+
+.pay-fees .pay-fees-container > div {
+    width: 48%;
+    float: left;
+    margin: 0 1%;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+.pay-fees .pay-fees-container > div img {
+    max-width: 100%;
+    display: block;
+    margin: 0px auto 20px;
+}
+
+ @media only screen and (max-width: 1180px) {
+    .pay-fees .pay-fees-container {
+        margin: 30px 0px;
+    }
+    .pay-fees .pay-fees-container > div {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .pay-fees .pay-fees-container {
+        margin: 30px 0px;
+    }
+    .pay-fees .pay-fees-container > div {
+        width: 100%;
+        margin: 0 0 15px;
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .pay-fees .pay-fees-container .btn {
+        font-size: 12px;
+    }
+}
+
+.announcement-banner {
+    background-color: #172244;
+    padding: 12px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99999;
+}
+
+.announcement-banner a {
+    text-decoration: underline;
+    color: #fff;
+}

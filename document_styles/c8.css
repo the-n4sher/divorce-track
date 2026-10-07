@@ -1,0 +1,50 @@
+html * {
+    font-family: sans-serif;
+   }
+   
+html, body {
+			margin: 0;
+			padding: 0;
+			position: relative;
+		}
+
+		body > div {
+			width: 100%;
+			text-align: center;
+			position: relative;
+			margin: 0;
+			padding: 0;
+			z-index: 0;
+		}
+
+		body > *:last-child {
+		    page-break-after: auto;
+		}
+
+
+img {
+	width: 85%;
+	height:auto;
+	margin: 0 3%;
+	position: relative;
+	z-index: 0;
+}
+
+
+.text,.textarea {
+	position: absolute;
+	z-index: 10;
+	border: none;
+	text-align: left;
+	font-size: 15px;
+}
+
+
+
+
+#petname{top:350px; left:86px; ;width:150px;height:20px;font-size:15px;}
+#petaddress{top:490px; left:88px;width:600px!important;height:100px;font-size:12px;}
+#court_name{top:135px;left:86px;font-weight:normal;font-size:13px;}
+#case_number{top:135px;left:452px;font-weight:normal;font-size:13px;}
+#child_details{top:230px;left:88px;width:250px;height:90px;font-size:13px;}
+#num_of_children{top:230px; left:450px;font-size:13px;}

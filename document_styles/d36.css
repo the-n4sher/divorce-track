@@ -1,0 +1,191 @@
+html, body {
+margin: 0;
+padding: 0;
+position: relative;
+}
+
+body > div {
+background-color: #fff;
+width: 100%;
+text-align: center;
+position: relative;
+margin: 0;
+padding: 0;
+}
+
+img {
+width: 85%;
+height:auto;
+margin: 0 3%;
+position: relative;
+z-index: 0;
+}
+
+.text {
+position: absolute;
+z-index: 10;
+border: none;
+text-align: left;
+font-size: 15px;
+}
+
+.tick {
+width: 10px;
+height: 10px;
+}
+
+.small-character {
+line-height: 0.9;
+width: 9px;
+height: 10px;
+}
+
+#name-of-court {
+width: 183px;
+height: 21px;
+top: 70px;
+right: 203px;
+}
+
+#case-no {
+width: 110px;
+height: 21px;
+top: 68px;
+right: 75px;
+}
+
+#name-of-petitioner {
+width: 183px;
+height: 21px;
+top: 121px;
+right: 203px;
+}
+
+#name-of-respondent {
+width: 183px;
+height: 21px;
+top: 175px;
+right: 203px;
+}
+
+#name-of-corespondent {
+width: 183px;
+height: 21px;
+top: 228px;
+right: 203px;
+}
+
+#petitioner-box {
+top: 409px;
+right: 616px;
+}
+
+#respondent-box {
+top: 409px;
+right: 535px;
+}
+
+#day1 {
+top: 435px;
+right: 637px;
+}
+
+#day2 {
+top: 435px;
+right: 619px;
+}
+
+#month1 {
+top: 435px;
+right: 594px;
+}
+
+#month2 {
+top: 435px;
+right: 576px;
+}
+
+#year1 {
+top: 435px;
+right: 551px;
+}
+
+#year2 {
+top: 435px;
+right: 533px;
+}
+
+#year3 {
+top: 435px;
+right: 516px;
+}
+
+#year4 {
+top: 435px;
+right: 497px;
+}
+
+#day3 {
+top: 700px;
+right: 614px;
+}
+
+#day4 {
+top: 700px;
+right: 597px;
+}
+
+#month3 {
+top: 700px;
+right: 572px;
+}
+
+#month4 {
+top: 700px;
+right: 554px;
+}
+
+#year5 {
+top: 700px;
+right: 529px;
+}
+
+#year6 {
+top: 700px;
+right: 511px;
+}
+
+#year7 {
+top: 700px;
+right: 494px;
+}
+
+#year8 {
+top: 700px;
+right: 476px;
+}
+
+#solicitor-fee {
+width: 149px;
+top: 601px;
+right: 70px;
+}
+
+.strike {
+position: absolute;
+z-index: 10;
+height: 100px;
+border-top: 2px solid #000;
+}
+
+
+#petitioner_strike{top:640px;left:180px;width:55px;height:10px;}
+#solicitor_strike{top:640px;left:240px;width:118px;height:10px;}
+#petitioner_respondent_strike{top:658px;left:180px;width:70px;height:10px;}
+#solicitor_respondent_strike{top:658px;left:256px;width:130px;height:10px;}
+
+#nisi_strike{top:414px;left:430px;width:68px;height:10px;}
+#conditonal_order_strike{top:414px;left:500px;width:100px;height:10px;}
+
+#absolute_strike{top:444px;left:410px;width:44px;height:10px;}
+#final_strike{top:444px;left:458px;width:35px;height:10px;}
