@@ -28,7 +28,13 @@ class Authentication
     		return false;
     	}
 
-    	if( ! $user->verifyPassword($password, $user->Password) )
+    	$password = trim($password);
+        $passwordMatches = $user->verifyPassword($password, $user->Password);
+        if (!$passwordMatches) {
+            // Support hashes created before password inputs stopped being HTML-escaped.
+            $passwordMatches = $user->verifyPassword(htmlentities($password), $user->Password);
+        }
+        if (!$passwordMatches)
     	{
     		
     		// Check if this is a temp password before failing the reqest
