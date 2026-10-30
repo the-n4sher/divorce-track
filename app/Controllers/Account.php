@@ -280,7 +280,11 @@ class Account extends BaseController
 
         if (
             ($this->package_consent_type == 1 && $this->package_code && $this->package_code != "DDPCBCS")
-            || ($this->package_consent_type == 2 && $this->use_portal === false && $this->isNonPortalConsentPackage())
+            || (
+                $this->package_consent_type == 2
+                && $this->use_portal === false
+                && in_array($this->package_code, ['DCP', 'DCPFT'], true)
+            )
         ) {
             return redirect()->to('consent-order/consent-order-progress');
         }
