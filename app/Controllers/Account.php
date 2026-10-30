@@ -41,8 +41,8 @@ class Account extends BaseController
     protected $consentOrderFFComplete;
     protected $vipPackages;
     protected $current_case_number;
- 
-   
+
+
     public function __construct()
     {
         $this->authService = service("auth");
@@ -252,7 +252,7 @@ class Account extends BaseController
             $firstLogin = $this->userModel->isFirstLogin(session("user_id"));
             if ($firstLogin === true) {
                 return redirect()->to(site_url('account/update-details'));
-            }else{
+            } else {
                 // Mark setup complete in session so nav shows
                 session()->set('account_setup', true);
             }
@@ -272,14 +272,19 @@ class Account extends BaseController
 
     public function index()
     {
-        
+
         if ($this->package_consent_type == 1 && $this->package_code && $this->package_code != "DDPCBCS") {
+            return redirect()->to('consent-order/consent-order-progress');
+        }
+
+        // DCP tests
+        if ($this->package_consent_type == 2) {
             return redirect()->to('consent-order/consent-order-progress');
         }
 
         $conditionalOrderDate = null;
         // Check if we have a conditional order date - but only if they are completing a questionnaire and its a portal case and is issued
-        if($this->requires_q == true && $this->use_portal == true && $this->is_issued == true) {
+        if ($this->requires_q == true && $this->use_portal == true && $this->is_issued == true) {
             // we need to get the case id from the user id
             $case_id = $this->returnCaseID(session("user_id"));
             $conditionalOrderDate =  $this->model->checkForConditionalOrderDate($case_id);
@@ -396,7 +401,7 @@ class Account extends BaseController
             session()->setFlashdata("errors", $this->validation->getErrors());
             return redirect()->to("account/my-account")->withInput()->withCookies();
         } else {
-            
+
             // Before we update, we will check the input for common sql and xss attacks
             helper('securityscan');
             if (isset($data) && contains_attack_strings($data)) {
@@ -439,7 +444,7 @@ class Account extends BaseController
                 session()->setFlashdata("ERR", "We have encountered an error, please try again.");
                 return redirect()->to("account/my-account");
             }
-   
+
             $upd = $this->model->updateAccountDetails($data);
             if ($upd  === TRUE) {
                 session()->setFlashdata("SUCC", "Account details successfully updated");
@@ -498,7 +503,7 @@ class Account extends BaseController
         }
 
         // Do we have a  vlalid orderPlaced date
-        $orderPlaced = ( $this->orderPlaced ) ? $this->orderPlaced : null;
+        $orderPlaced = ($this->orderPlaced) ? $this->orderPlaced : null;
         $view_data = [
             'title' => 'Payments',
             'fees_paid' => $this->model->getFeesPaid($user_id),
@@ -633,7 +638,7 @@ class Account extends BaseController
                         $checkout = $stripe->checkout->sessions->create($create_data);
                         if ($checkout != null) {
                             // Redirect to the checkout page
-                           return $this->response->redirect($checkout->url);
+                            return $this->response->redirect($checkout->url);
                         } else {
                             die("Failed to generate payment link. Contact Support");
                         }
@@ -740,11 +745,11 @@ class Account extends BaseController
             // If false, then we redirect to the verify page
             if ($doCheck === false) {
                 return redirect()->to("account/verify")->withInput()->withCookies();
-            }else{
+            } else {
                 // is true, then we need to check if the session redirect_url is set, if it is then we redirect to the url.
                 if (session()->get("redirect_url")) {
                     return redirect()->to(session()->get("redirect_url"));
-                }else{
+                } else {
                     return redirect()->to("account")->withCookies();
                 }
             }
@@ -755,10 +760,10 @@ class Account extends BaseController
         if ($tempBypass) {
             return redirect()->to("account")->withCookies();
         }
-        
+
         // we only send once, this is managed in the model
         $this->model->resendVerificationCode($user_id, false);
-        
+
         return view("Account/verify", ['title' => 'Verify Account']);
     }
 

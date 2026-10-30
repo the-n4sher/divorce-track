@@ -256,7 +256,7 @@ class ConsentOrder extends BaseController
             if ($firstLogin === true) {
                 return $this->response->redirect(site_url('/account/update-details'));
                 exit();
-            }else{
+            } else {
                 // Mark setup complete in session so nav shows
                 session()->set('account_setup', true);
             }
@@ -270,7 +270,7 @@ class ConsentOrder extends BaseController
     {
 
         // We only redirect here if the CO  hasn't been issed and its a managed service
-        if ($this->is_issued === false && $this->package_consent_type == 2) {
+        if ($this->package_consent_type == 2 && $this->use_portal === true && $this->is_issued === false) {
             return redirect()->to("account");
         }
 
@@ -284,7 +284,6 @@ class ConsentOrder extends BaseController
         // if this is a split application and the appliant has completed their side we need to change the wording on the dashboard
         $questionnaire_data = (count($check_for_row) === 0) ? [] : $check_for_row[0];
         $allNotifications = $this->model->returnAllNotifications($user_id, $case_id);
-
         // Get the court details
         $court_details = $this->model->getCourtDetails($user_id);
         $court_name = $court_details['court_name'] ?? '';
@@ -383,7 +382,7 @@ class ConsentOrder extends BaseController
             return redirect()->back()->withInput();
         }
     }
-    
+
     public function streamFileCleanBreak($user_id)
     {
 
@@ -393,7 +392,7 @@ class ConsentOrder extends BaseController
         }
 
         $questionnaireData = $this->model->fetchCBCSData($user_id);
-        if($questionnaireData === false){
+        if ($questionnaireData === false) {
             die("Sorry, there was an error generating the clean break consent order document. Please contact support.");
         }
 
@@ -405,21 +404,21 @@ class ConsentOrder extends BaseController
         $TBS->SetOption(array('noerr' => true));
 
         // We want to create a word document on the fly
-        $templatePath = getcwd() . DIRECTORY_SEPARATOR . "documents". DIRECTORY_SEPARATOR . "CONSENT_ORDER" . DIRECTORY_SEPARATOR . "CBCS_Clean_Break.docx";
+        $templatePath = getcwd() . DIRECTORY_SEPARATOR . "documents" . DIRECTORY_SEPARATOR . "CONSENT_ORDER" . DIRECTORY_SEPARATOR . "CBCS_Clean_Break.docx";
 
         //create the applicant name
         $app_name = (isset($questionnaireData->app_forename) ? $questionnaireData->app_forename : '') . " ";
         $app_name .= (isset($questionnaireData->app_other_names) && $questionnaireData->app_other_names != "") ? $questionnaireData->app_other_names . " " : "";
         $app_name .= isset($questionnaireData->app_surname) ? $questionnaireData->app_surname : '';
         $app_name = ucwords($app_name);
-  
+
         //create the respondent name
         $res_name = (isset($questionnaireData->res_forename) ? $questionnaireData->res_forename : '') . " ";
         $res_name .= (isset($questionnaireData->res_other_names) && $questionnaireData->res_other_names != "") ? $questionnaireData->res_other_names . " " : "";
         $res_name .= isset($questionnaireData->res_surname) ? $questionnaireData->res_surname : '';
         $res_name = ucwords($res_name);
 
-           // replace the data
+        // replace the data
         $case_number = (isset($questionnaireData->case_number) ? $questionnaireData->case_number : '');
         $TBS->VarRef["case_number"] = $case_number;
         $TBS->VarRef["app_name"] = $app_name;
@@ -581,10 +580,10 @@ class ConsentOrder extends BaseController
         }
 
         // If the package code is either 'DPPCO','CBC','CBCFT','CBO and purchased after the 4th Jan 2026 
-        $pension_share_remove_codes = ["DPPCO","CBC","CBCFT","CBO"];
+        $pension_share_remove_codes = ["DPPCO", "CBC", "CBCFT", "CBO"];
         $pension_cut_off = "2026-01-04 23:59:59";
 
-        if(!empty($this->package_code) && in_array($this->package_code, $pension_share_remove_codes) && !empty($this->orderPlaced) && $this->orderPlaced > $pension_cut_off && $page == 5){
+        if (!empty($this->package_code) && in_array($this->package_code, $pension_share_remove_codes) && !empty($this->orderPlaced) && $this->orderPlaced > $pension_cut_off && $page == 5) {
             return redirect()->to("consent-order/consent_order_ff/6");
         }
 
@@ -595,15 +594,15 @@ class ConsentOrder extends BaseController
             ($this->package_code == "CBO" && ($page == 4 || $page == 5)) ||
             ($this->package_code == "DPPCBO" && ($page == 4 || $page == 5))
         ) {
-   
+
             if ($page == 4) {
                 // if the user tries to get to page 4 we will send them to page 6
-                $page = ( in_array($this->package_code, $this->codesToCheck) ) ? 7 : 6;
+                $page = (in_array($this->package_code, $this->codesToCheck)) ? 7 : 6;
                 return redirect()->to("consent-order/consent_order_ff/{$page}");
             }
 
             // If the previous button is pressed on page 6 send them to page 3
-            if ($page == 5) {   
+            if ($page == 5) {
                 // if the user tries to get to page 4 we will send them to page 3
                 return redirect()->to("consent-order/consent_order_ff/3");
             }
@@ -612,8 +611,7 @@ class ConsentOrder extends BaseController
         // has the user completed the previous page, if its page 2 then we dont need to check page 1
         // On page 7 we will make sure we have a D81 file, if the respondent has logged in then we check for a respondent d81 file
         $pages_to_check = [3, 4, 7];
-        if (in_array($page, $pages_to_check)) 
-        {
+        if (in_array($page, $pages_to_check)) {
             // Check the previous page was completed - we need to be mindful that this may be a split application
             $checkPreviousPage = $this->model->checkPreviousPage($user_id, $page, $this->res_logged_in, $this->package_code);
 
@@ -652,12 +650,12 @@ class ConsentOrder extends BaseController
                 if ($check_co_type->OrderPlaced < $this->consentManagedCutOff) {
                     return redirect()->to('account');
                 }
+                // Check to see if this is a managed C only
 
                 // Has the issue step been completed for this case
                 $has_completed_step = $this->questionnaireModel->hasDateIssued($case_id);
-
                 // The Divorce step for issue_date HASN'T been completed yet
-                if ($has_completed_step == 0) {
+                if ($has_completed_step == 0 && $this->package_code !== "DCP") {
                     return redirect()->to('account');
                 }
             }
@@ -1073,7 +1071,7 @@ class ConsentOrder extends BaseController
                 if (ob_get_level()) {
                     ob_end_clean();
                 }
-                
+
                 // for security we dont want to expose the user id in the file name
                 $randomFileName = uniqid() . ".pdf";
                 header("Content-Type: application/pdf");
@@ -1149,7 +1147,7 @@ class ConsentOrder extends BaseController
             }
         }
 
-       
+
         // We need to check if the date_complete is null, its null set it to the current date ($completed_date), else use the database value for date_completed
         if ($ff_details['date_completed'] == null) {
             $ff_details['date_completed'] = $completed_date;
@@ -1213,8 +1211,7 @@ class ConsentOrder extends BaseController
         $client_details = $this->model->getUserDetails($user_id);
 
         // If the product is CBCS do the following
-        if (isset($this->package_code) && in_array($this->package_code, $this->codesToCheck) && $ff_details['ff_complete_email_sent'] == 0 )
-        {
+        if (isset($this->package_code) && in_array($this->package_code, $this->codesToCheck) && $ff_details['ff_complete_email_sent'] == 0) {
             // Set the ff_complete_email_sent = 1 to stop this script being run again
             $this->model->updateQuestionnaire($user_id, ['ff_complete_email_sent' => 1]);
 
@@ -1222,7 +1219,7 @@ class ConsentOrder extends BaseController
             $table = "step_manager_cc_standalone_bridge";
             $now   = date('Y-m-d H:i:s');
             $user  = 37;
-            
+
             $data = [];
             foreach ([1, 2, 3] as $stepId) {
                 $data[] = [
@@ -1249,11 +1246,10 @@ class ConsentOrder extends BaseController
             // set exclude_from_listings = 1 for the user_id
             $this->model->updateQuestionnaire($user_id, ['exclude_from_listings' => 1]);
         }
-   
+
 
         //we only want to send the completed email once
-        if ($ff_details['ff_complete_email_sent'] == 0 && isset($this->package_code) && !in_array($this->package_code, $this->codesToCheck)) 
-        {
+        if ($ff_details['ff_complete_email_sent'] == 0 && isset($this->package_code) && !in_array($this->package_code, $this->codesToCheck)) {
 
             //get the email of the case manager that is dealing with this
             list($get_assigned_to, $get_cm_details) = $this->model->getAssignedCMData($case_id);
@@ -1376,8 +1372,7 @@ class ConsentOrder extends BaseController
 
 
         // dont do this if CBCS as we dont use the date at all
-        if (isset($this->package_code) && !empty($this->package_code) && !in_array($this->package_code, $this->codesToCheck)) 
-        {
+        if (isset($this->package_code) && !empty($this->package_code) && !in_array($this->package_code, $this->codesToCheck)) {
             //We dont want to change the due date IF the application was already completed on a different date than date_completed, it need to be between the date and 00:00:00 and 23:59:59 of that date
             $targetDate = date('Y-m-d', strtotime($completed_date));
             $completedDate = date('Y-m-d', strtotime($ff_details['date_completed']));

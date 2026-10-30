@@ -412,7 +412,7 @@ class AccountModel extends \CodeIgniter\Model
                 //we now want to check if we need to update the password
                 if (array_key_exists("password", $data) && $data['password'] != "") {
                     $options = ['cost' => 10];
-                    $password = htmlentities(trim($data['password']));
+                    $password = trim($data['password']);
                     $hashedPass = password_hash($password, PASSWORD_BCRYPT, $options);
                     $update['Password'] = $hashedPass; //add the password to the update array so we can update the password
                 }
@@ -883,7 +883,7 @@ class AccountModel extends \CodeIgniter\Model
 
         //hash the password
         $options = ['cost' => 10];
-        $password = htmlentities(trim($data["password"]));
+        $password = trim($data["password"]);
         $hashedPass = password_hash($password, PASSWORD_BCRYPT, $options);
 
         //add the hashed password into the data array
@@ -965,7 +965,7 @@ class AccountModel extends \CodeIgniter\Model
             expire: $expirySeconds,  // absolute timestamp
             path: '/',
             domain: '',
-            secure: true,              // HTTPS only
+            secure: ENVIRONMENT === 'production', // HTTPS only in production
             httponly: true,
             samesite: 'Lax'
         );

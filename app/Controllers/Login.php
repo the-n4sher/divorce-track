@@ -78,11 +78,9 @@ class Login extends BaseController
                 }
 
                 // Has this user past the 2FA? Dont check if this is an admin login
-                if (!session()->has('admin_login')) 
-                {
+                if (!session()->has('admin_login')) {
                     $check2FA = $this->model->check2FA(session("user_id"));
-                    if ($check2FA === false) 
-                    {
+                    if ($check2FA === false) {
                         // Set a DB flag two_factor_required = 1 to show that the user needs to complete 2FA
                         // The user cant use the application until they have completed 2FA
                         $this->model->setTwoFactorRequired(session("user_id"));
@@ -108,6 +106,7 @@ class Login extends BaseController
                     ->with('info', 'Login Successful')
                     ->withCookies();
             } else {
+
                 return redirect()->back()
                     ->withInput()
                     ->with('warning', 'Email/Password is incorrect. Please try again');
