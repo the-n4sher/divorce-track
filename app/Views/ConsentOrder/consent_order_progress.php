@@ -51,35 +51,10 @@
 
                 <?php elseif ($consent_ff_complete == false) : ?>
                     <div class="alert alert-warning">
-                        <div>
-                            <?php if ($package_code != "CBCS") : ?>
-                                <p id="assets-question">Before you start to complete the Consent Order Fact Finder - can you please confirm if your COMBINED assets are over £3,000.000 (£3 Million) </p>
-                            <?php else : ?>
-                                <p id="assets-question">Before you start to complete the Clean Break Order Fact Finder - can you please confirm if your COMBINED assets are over £3,000.000 (£3 Million) </p>
-                            <?php endif; ?>
-
-                            <div id="assets-question-options">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="assets-question" id="assets-question-yes" value="1">
-                                    <label class="form-check-label" for="assets-question-yes">Yes</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="assets-question" id="assets-question-no" value="0">
-                                    <label class="form-check-label" for="assets-question-no">No</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr>
-                        <p id="upgrade-message" style="display: none!important;font-weight: bold;">
-                            Thank you for confirming your assets are over £3,000.000 (£3 Million) - as such your service will need to be managed by our partner Solicitors to manage this for you - please contact the team on 01793 384029 to discuss this further
-                        </p>
-
-                        <!-- As default we will hide the start button until the have answered the assets question -->
                         <?php if ($package_code != "CBCS") : ?>
-                            <span id="start-co-ff-button" style="display: none;important;font-weight: bold;">Please complete your consent order fact finder by clicking <a href="<?= base_url(); ?>consent-order/consent_order_ff/1">here.</a></span>
+                            Please complete your consent order fact finder by clicking <a href="<?= base_url(); ?>consent-order/consent_order_ff/1">here.</a>
                         <?php else : ?>
-                            <span id="start-co-ff-button" style="display: none;important;font-weight: bold;">Please complete your clean break order fact finder by clicking <a href="<?= base_url(); ?>consent-order/consent_order_ff/1">here.</a></span>
+                            Please complete your clean break order fact finder by clicking <a href="<?= base_url(); ?>consent-order/consent_order_ff/1">here.</a>
                         <?php endif; ?>
                     </div>
                 <?php else : ?>
@@ -118,25 +93,6 @@
         </div>
     </div>
 </div>
-
-
-<script>
-    $(document).ready(function() {
-        $("#assets-question-yes").click(function() {
-            // show upgrade-message div
-            $("#upgrade-message").show();
-            // hide start-co-ff-button div
-            $("#start-co-ff-button").hide();
-        });
-
-        $("#assets-question-no").click(function() {
-            // hide upgrade-message div
-            $("#upgrade-message").hide();
-            // show start-co-ff-button div
-            $("#start-co-ff-button").show();
-        });
-    });
-</script>
 
 
 <?php $this->endSection(); ?>

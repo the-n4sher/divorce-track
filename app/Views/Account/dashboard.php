@@ -117,25 +117,6 @@
 					    <div class="panel-heading"><h2>Progress Of My Consent Order</h2></div>
 
 						<div class="panel-body">
-                            <p id="assets-question">Before you start to complete the Consent Order Fact Finder - can you please confirm if your COMBINED assets are over £3,000.000 (£3 Million) </p>
-        
-                            <div id="assets-question-options">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="assets-question" id="assets-question-yes" value="1">
-                                    <label class="form-check-label" for="assets-question-yes">Yes</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="assets-question" id="assets-question-no" value="0">
-                                    <label class="form-check-label" for="assets-question-no">No</label>
-                                </div>
-                            </div>
-                        </div>
-
-						<p id="upgrade-message" style="display: none!important;font-weight: bold;margin-left:40px;">
-                            Thank you for confirming your assets are over £3,000.000 (£3 Million) - as such your service will need to be managed by our partner Solicitors to manage this for you - please contact the team on 01793 384029 to discuss this further
-                        </p>
-
-						<div class="panel-body" id="start-co-ff-button" style="display: none!important;">		
 						  <a href="<?=site_url("consent-order/consent_order_ff/1");?>" class="btn btn-primary"><span>Please complete the consent order fact finding questionnaire.</span></a>
 					    </div>
 
@@ -260,25 +241,6 @@
 
 	</div>
 </div>
-
-
-<script>
-    $(document).ready(function() {
-        $("#assets-question-yes").click(function() {
-            // show upgrade-message div
-            $("#upgrade-message").show();
-            // hide start-co-ff-button div
-            $("#start-co-ff-button").hide();
-        });
-
-        $("#assets-question-no").click(function() {
-            // hide upgrade-message div
-            $("#upgrade-message").hide();
-            // show start-co-ff-button div
-            $("#start-co-ff-button").show();
-        });
-    });
-</script>
 
 
 <?php $this->endSection() ;?>
