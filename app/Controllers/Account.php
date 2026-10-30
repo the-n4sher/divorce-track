@@ -278,7 +278,10 @@ class Account extends BaseController
     public function index()
     {
 
-        if (($this->package_consent_type == 1 && $this->package_code && $this->package_code != "DDPCBCS") || $this->isNonPortalConsentPackage()) {
+        if (
+            ($this->package_consent_type == 1 && $this->package_code && $this->package_code != "DDPCBCS")
+            || ($this->package_consent_type == 2 && $this->use_portal === false && $this->isNonPortalConsentPackage())
+        ) {
             return redirect()->to('consent-order/consent-order-progress');
         }
 
