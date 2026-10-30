@@ -84,12 +84,12 @@ class ConsentOrder extends BaseController
             $this->setCoType();
             $this->setIsManaged();
             $this->setIsSolManaged();
-            $this->setStandardNotifications();
             $this->setIsIssued();
             $this->setMenuPackageData();
             $this->setUploadStep();
             $this->setRequiresQuestionnaire();
             $this->setIsPortal();
+            $this->setStandardNotifications();
             $this->setHideForPortal();
             $this->setConsentQuestionCount();
             $this->setOrderPlaced();
@@ -161,6 +161,11 @@ class ConsentOrder extends BaseController
 
     public function setIsPortal()
     {
+        if ($this->isNonPortalConsentPackage()) {
+            $this->use_portal = false;
+            return;
+        }
+
         $res = $this->questionnaireModel->returnRow(session("user_id"));
         $this->use_portal = ($res && $res->portal_case == 1) ? true : false;
     }
@@ -196,8 +201,8 @@ class ConsentOrder extends BaseController
     public function setStandardNotifications()
     {
         $case_id = $this->returnCaseID(session("user_id"));
-        $this->notification_count = $this->questionnaireModel->getNotifications($case_id);
-        $this->latest_notification = $this->questionnaireModel->getNotifications($case_id, true);
+        $this->notification_count = $this->questionnaireModel->getNotifications($case_id, false, $this->use_portal);
+        $this->latest_notification = $this->questionnaireModel->getNotifications($case_id, true, $this->use_portal);
         $this->notification_data = $this->questionnaireModel->getNotificationReplacements(session("user_id"));
     }
 
@@ -283,7 +288,7 @@ class ConsentOrder extends BaseController
 
         // if this is a split application and the appliant has completed their side we need to change the wording on the dashboard
         $questionnaire_data = (count($check_for_row) === 0) ? [] : $check_for_row[0];
-        $allNotifications = $this->model->returnAllNotifications($user_id, $case_id);
+        $allNotifications = $this->model->returnAllNotifications($user_id, $case_id, $this->use_portal);
         // Get the court details
         $court_details = $this->model->getCourtDetails($user_id);
         $court_name = $court_details['court_name'] ?? '';
@@ -306,7 +311,7 @@ class ConsentOrder extends BaseController
     public function documents()
     {
 
-        if ($this->is_issued === false && $this->package_consent_type == 2) {
+        if ($this->is_issued === false && $this->package_consent_type == 2 && !$this->isNonPortalConsentPackage()) {
             return redirect()->to("account");
         }
 
@@ -655,7 +660,7 @@ class ConsentOrder extends BaseController
                 // Has the issue step been completed for this case
                 $has_completed_step = $this->questionnaireModel->hasDateIssued($case_id);
                 // The Divorce step for issue_date HASN'T been completed yet
-                if ($has_completed_step == 0 && $this->package_code !== "DCP") {
+                if ($has_completed_step == 0 && !$this->isNonPortalConsentPackage()) {
                     return redirect()->to('account');
                 }
             }

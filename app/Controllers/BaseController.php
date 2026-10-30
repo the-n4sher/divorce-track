@@ -44,6 +44,11 @@ abstract class BaseController extends Controller
      */
     protected $jointAppProducts = [];
 
+    protected function isNonPortalConsentPackage(): bool
+    {
+        return in_array($this->package_code ?? null, ['DCP', 'DCPFT'], true);
+    }
+
     /**
      * Be sure to declare properties for any property fetch you initialized.
      * The creation of dynamic property is deprecated in PHP 8.2.

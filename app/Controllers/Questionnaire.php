@@ -73,12 +73,12 @@ class Questionnaire extends BaseController
         $this->setCoType();
         $this->setIsManaged();
         $this->setIsSolManaged();
-        $this->setStandardNotifications();
         $this->setIsIssued();
         $this->setMenuPackageData();
         $this->setUploadStep();
         $this->setRequiresQuestionnaire();
         $this->setIsPortal();
+        $this->setStandardNotifications();
         $this->setHideForPortal();
         $this->setConsentQuestionCount();
         $this->setOrderPlaced();
@@ -140,6 +140,11 @@ class Questionnaire extends BaseController
 
     public function setIsPortal()
     {
+        if ($this->isNonPortalConsentPackage()) {
+            $this->use_portal = false;
+            return;
+        }
+
         $res = $this->model->returnRow(session("user_id"));
         $this->use_portal = ($res && $res->portal_case == 1) ? true : false;
     }
@@ -175,8 +180,8 @@ class Questionnaire extends BaseController
     public function setStandardNotifications()
     {
         $case_id = $this->returnCaseID(session("user_id"));
-        $this->notification_count = $this->model->getNotifications($case_id);
-        $this->latest_notification = $this->model->getNotifications($case_id, true);
+        $this->notification_count = $this->model->getNotifications($case_id, false, $this->use_portal);
+        $this->latest_notification = $this->model->getNotifications($case_id, true, $this->use_portal);
         $this->notification_data = $this->model->getNotificationReplacements(session("user_id"));
     }
 
@@ -301,7 +306,7 @@ class Questionnaire extends BaseController
                 // Has the user uploaded there marriage cert and signed the agreement through docusign
                 $check_if_complete = $this->model->hasSigned($user_id);
 
-                if ($check_if_complete === false) {
+                if ($check_if_complete === false && !$this->isNonPortalConsentPackage()) {
                     //they still need to complete the required fields
                     $this->use_portal = true;
 
@@ -320,7 +325,7 @@ class Questionnaire extends BaseController
         }
 
         // Check if we are dealing with a portal client
-        $check_is_portal = $this->model->checkIfPortal($user_id);
+        $check_is_portal = $this->isNonPortalConsentPackage() ? false : $this->model->checkIfPortal($user_id);
         $this->use_portal = $check_is_portal;
 
         //get the questionnaire details

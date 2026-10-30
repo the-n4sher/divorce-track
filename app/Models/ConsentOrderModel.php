@@ -1791,7 +1791,7 @@ class ConsentOrderModel extends \CodeIgniter\Model
     }
 
 
-    public function returnAllNotifications($user_id, $case_id)
+    public function returnAllNotifications($user_id, $case_id, ?bool $usePortalOverride = null)
     {
 
         // Is this a consent, if so a standalone or managed
@@ -1812,6 +1812,10 @@ class ConsentOrderModel extends \CodeIgniter\Model
 
         if ($check_is_portal != NULL && $check_is_portal->portal_case == 1) {
             $use_portal = true;
+        }
+
+        if ($usePortalOverride !== null) {
+            $use_portal = $usePortalOverride;
         }
 
         if ($use_portal == true) {

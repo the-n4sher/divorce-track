@@ -13,7 +13,7 @@
 <div class="row">
     <div class="col-8">
         <?php
-        if (isset($consent_ff_complete) && $consent_ff_complete === true && isset($package_consent_type) && $package_consent_type == 1) : ?>
+        if (isset($consent_ff_complete) && $consent_ff_complete === true && isset($package_consent_type) && ($package_consent_type == 1 || in_array($package_code, ["DCP", "DCPFT"], true))) : ?>
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h2>Court Details</h2>

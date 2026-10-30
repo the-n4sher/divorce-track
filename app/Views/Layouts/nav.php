@@ -24,7 +24,7 @@
     if ($is_sol_managed == 0 && $is_package_managed == 1 && $package_consent_type == 1) {
         $case_type = "consent_only";
     }
-    if ($is_sol_managed == 0 && $is_package_managed == 1 && $package_consent_type == 2 && !empty($package_code) && $package_code == "DCP") {
+    if ($is_sol_managed == 0 && $is_package_managed == 1 && $package_consent_type == 2 && in_array($package_code, ["DCP", "DCPFT"], true)) {
         $case_type = "consent_only";
     }
 

@@ -665,13 +665,16 @@ class AccountModel extends \CodeIgniter\Model
     }
 
 
-    public function returnAllNotifications($user_id, $case_id, $returnCount = false)
+    public function returnAllNotifications($user_id, $case_id, $returnCount = false, ?bool $usePortalOverride = null)
     {
 
         // Check if we are dealing with a portal client
         $builder = $this->getQuestionnaireTable();
         $check_is_portal = $builder->where('user_id', $user_id)->get()->getRow();
         $use_portal = ($check_is_portal != NULL && $check_is_portal->portal_case == 1) ? true : false;
+        if ($usePortalOverride !== null) {
+            $use_portal = $usePortalOverride;
+        }
 
         $results = [];
         if ($use_portal == TRUE) {
@@ -1418,12 +1421,15 @@ If you did not initiate this request, it may have been made by the other account
         }
     }
 
-    public function setAllToRead($user_id)
+    public function setAllToRead($user_id, ?bool $usePortalOverride = null)
     {
         // Check if we are dealing with a portal client
         $builder = $this->getQuestionnaireTable();
         $check_is_portal = $builder->select('portal_case')->where('user_id', $user_id)->get()->getRow();
         $use_portal = ($check_is_portal != NULL && $check_is_portal->portal_case == 1) ? true : false;
+        if ($usePortalOverride !== null) {
+            $use_portal = $usePortalOverride;
+        }
         $table_name = ($use_portal == TRUE) ? "portal_step_manager_bridge" : "step_manager_bridge";
 
         //set all notfications to read

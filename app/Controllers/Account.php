@@ -73,12 +73,12 @@ class Account extends BaseController
         $this->setCoType();
         $this->setIsManaged();
         $this->setIsSolManaged();
-        $this->setStandardNotifications();
         $this->setIsIssued();
         $this->setMenuPackageData();
         $this->setUploadStep();
         $this->setRequiresQuestionnaire();
         $this->setIsPortal();
+        $this->setStandardNotifications();
         $this->setHideForPortal();
         $this->setConsentQuestionCount();
         $this->setOrderPlaced();
@@ -157,6 +157,11 @@ class Account extends BaseController
 
     public function setIsPortal()
     {
+        if ($this->isNonPortalConsentPackage()) {
+            $this->use_portal = false;
+            return;
+        }
+
         $res = $this->questionnaireModel->returnRow(session("user_id"));
         $this->use_portal = ($res && $res->portal_case == 1) ? true : false;
     }
@@ -193,8 +198,8 @@ class Account extends BaseController
     public function setStandardNotifications()
     {
         $case_id = $this->returnCaseID(session("user_id"));
-        $this->notification_count = $this->questionnaireModel->getNotifications($case_id);
-        $this->latest_notification = $this->questionnaireModel->getNotifications($case_id, true);
+        $this->notification_count = $this->questionnaireModel->getNotifications($case_id, false, $this->use_portal);
+        $this->latest_notification = $this->questionnaireModel->getNotifications($case_id, true, $this->use_portal);
 
         $this->notification_data = $this->questionnaireModel->getNotificationReplacements(session("user_id"));
     }
@@ -273,7 +278,7 @@ class Account extends BaseController
     public function index()
     {
 
-        if ($this->package_consent_type == 1 && $this->package_code && $this->package_code != "DDPCBCS") {
+        if (($this->package_consent_type == 1 && $this->package_code && $this->package_code != "DDPCBCS") || $this->isNonPortalConsentPackage()) {
             return redirect()->to('consent-order/consent-order-progress');
         }
 
@@ -462,9 +467,9 @@ class Account extends BaseController
         $case_id = $this->model->returnCaseIDFromUserId($user_id);
 
         // Set all notifications to read status
-        $this->model->setAllToRead($user_id);
+        $this->model->setAllToRead($user_id, $this->use_portal);
 
-        $allNotifications = $this->model->returnAllNotifications($user_id, $case_id);
+        $allNotifications = $this->model->returnAllNotifications($user_id, $case_id, false, $this->use_portal);
 
         $view_data = [
             'title' => 'Notifications',

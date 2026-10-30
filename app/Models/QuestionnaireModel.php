@@ -1129,7 +1129,7 @@ class QuestionnaireModel extends \CodeIgniter\Model
 	}
 
 
-	public function getNotifications($case_id, $returnFirstRow = false)
+	public function getNotifications($case_id, $returnFirstRow = false, ?bool $usePortalOverride = null)
 	{
 		$user_id = session("user_id");
 		$check_is_portal = $this->select('portal_case')->where('user_id', $user_id)->get()->getRow();
@@ -1137,6 +1137,9 @@ class QuestionnaireModel extends \CodeIgniter\Model
 
 		if ($check_is_portal != NULL && $check_is_portal->portal_case == 1) {
 			$use_portal = true;
+		}
+		if ($usePortalOverride !== null) {
+			$use_portal = $usePortalOverride;
 		}
 
 		if ($use_portal == TRUE) {
