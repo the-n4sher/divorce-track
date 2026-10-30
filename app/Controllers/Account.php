@@ -277,11 +277,6 @@ class Account extends BaseController
             return redirect()->to('consent-order/consent-order-progress');
         }
 
-        // DCP tests
-        if ($this->package_consent_type == 2) {
-            return redirect()->to('consent-order/consent-order-progress');
-        }
-
         $conditionalOrderDate = null;
         // Check if we have a conditional order date - but only if they are completing a questionnaire and its a portal case and is issued
         if ($this->requires_q == true && $this->use_portal == true && $this->is_issued == true) {
